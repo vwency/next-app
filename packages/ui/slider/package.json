@@ -9,14 +9,17 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint . --ext .ts,.tsx",
-    "typecheck": "tsc --noEmit"
+    "build": "tsc && rsync -av --include '*/' --include '*.scss' --exclude '*' src/ dist/",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
   "peerDependencies": {
     "react": "^18.0.0"
   },
   "dependencies": {
+    "@shared/types": "workspace:*",
+    "@ui/hooks": "workspace:*",
+    "@shared/consts": "workspace:*",
     "lucide-react": "^0.542.0",
     "next": "^15.5.3",
     "react-dom": "^19.1.1"

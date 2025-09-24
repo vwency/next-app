@@ -1,33 +1,32 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "pnpm exec next dev",
-    "build": "pnpm exec next build",
-    "gh-deploy": "pnpm run build && pnpm exec gh-pages -d out",
-    "start": "pnpm install && pnpm exec next start",
-    "prepare": "husky"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.15.1",
-  "devDependencies": {
-    "@eslint/js": "^9.34.0",
-    "@types/node": "^24.3.0",
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
-    "next": "^15.5.2",
-    "sass": "^1.91.0",
-    "typescript": "^5.9.2"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
+    "@shared/consts": "workspace:*",
+    "@shared/interfaces": "workspace:*",
+    "@shared/types": "workspace:*",
+    "@ui/buttons": "workspace:*",
+    "@ui/hooks": "workspace:*",
+    "@ui/modals": "workspace:*",
+    "@ui/slider": "workspace:*",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.542.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "next": "^15.5.3",
+    "sass": "^1.91.0",
+    "typescript": "^5.9.2"
   }
 }

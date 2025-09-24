@@ -12,20 +12,13 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@shared/consts": ["../packages/shared/consts"],
-      "@ui/hooks": ["../packages/ui/hooks"],
-      "@ui/modals": ["../packages/ui/modals"],
-      "@ui/slider": ["../packages/ui/slider"],
-      "@ui/buttons": ["../packages/ui/buttons"],
-      "@shared/types": ["../packages/shared/types"],
-      "@shared/interfaces": ["../packages/shared/interfaces"]
-    },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "plugins": [
       {
         "name": "next"
