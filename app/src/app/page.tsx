@@ -3,7 +3,7 @@
 import React, { useRef } from 'react'
 import MainLayout from '@/components/pages/main'
 import '@/styles/Global/index.scss'
-import HeaderLayout from '@/components/global/header/index'
+import { HeaderLayout } from '@ui/menu'
 import Stars from '@/components/global/stars'
 
 export default function Home() {

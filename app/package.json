@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@shared/consts": "workspace:*",
+    "@ui/menu": "workspace:*",
     "@shared/interfaces": "workspace:*",
     "@shared/types": "workspace:*",
     "@ui/buttons": "workspace:*",

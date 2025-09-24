@@ -1,9 +1,9 @@
 'use client'
 
 import React, { forwardRef } from 'react'
-import '@/styles/Header/menu/index.scss'
-import { MainMenuProps } from '@shared/interfaces'
 import Link from 'next/link'
+import './styles/index.scss'
+import { MainMenuProps } from '@shared/interfaces'
 
 const MainMenu = forwardRef<HTMLDivElement, MainMenuProps>(
   ({ contentRef, isOpen, toggleMenu }, ref) => {
@@ -29,7 +29,6 @@ const MainMenu = forwardRef<HTMLDivElement, MainMenuProps>(
             <li className="list-inline__item">
               <Link href="/afisha">Афиша</Link>
             </li>
-
             <li className="list-inline__item">Кинотеатры</li>
             <li className="list-inline__item">О нас</li>
           </ul>

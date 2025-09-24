@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import MainMenu from './menu/menu'
-import '@/styles/Header/index.scss'
+import MainMenu from '../MainMenu/MainMenu'
+import './styles/wrapper/index.scss'
 import { HeaderLayoutProps } from '@shared/interfaces'
 import { MAX_SCROLL_HIDE, SCROLL_SHOW_THRESHOLD } from '@shared/consts'
 

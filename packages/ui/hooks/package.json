@@ -9,7 +9,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && rsync -av --include '*/' --include '*.scss' --exclude '*' src/ dist/",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist"
   },

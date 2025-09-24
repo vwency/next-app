@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import '@/styles/Global/index.scss'
-import HeaderLayout from '@/components/global/header/index'
+import { HeaderLayout } from '@ui/menu'
 import Stars from '@/components/global/stars'
 import GalleryNoModal from '@/components/pages/afisha/Content/NonModal'
 import RightButtonAfisha from '@/components/pages/afisha/Buttons/index'

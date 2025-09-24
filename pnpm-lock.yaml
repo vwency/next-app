@@ -38,9 +38,6 @@ importers:
       lint-staged:
         specifier: ^16.1.6
         version: 16.2.0
-      next:
-        specifier: ^15.5.3
-        version: 15.5.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.93.1)
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -77,6 +74,9 @@ importers:
       '@ui/hooks':
         specifier: workspace:*
         version: link:../packages/ui/hooks
+      '@ui/menu':
+        specifier: workspace:*
+        version: link:../packages/ui/menu
       '@ui/modals':
         specifier: workspace:*
         version: link:../packages/ui/modals
@@ -191,6 +191,46 @@ importers:
       '@types/react':
         specifier: ^19.1.13
         version: 19.1.13
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.2
+
+  packages/ui/menu:
+    dependencies:
+      '@shared/consts':
+        specifier: workspace:*
+        version: link:../../shared/consts
+      '@shared/interfaces':
+        specifier: workspace:*
+        version: link:../../shared/interfaces
+      embla-carousel-react:
+        specifier: ^8.6.0
+        version: 8.6.0(react@18.3.1)
+      next:
+        specifier: ^15.5.3
+        version: 15.5.3(react-dom@19.1.1(react@18.3.1))(react@18.3.1)(sass@1.93.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.19
+        version: 6.1.19(react-dom@19.1.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
       typescript:
         specifier: ^5.0.0
         version: 5.9.2
