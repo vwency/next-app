@@ -68,9 +68,15 @@ importers:
       '@shared/types':
         specifier: workspace:*
         version: link:../packages/shared/types
+      '@ui/advertisements':
+        specifier: workspace:*
+        version: link:../packages/ui/advertisements
       '@ui/buttons':
         specifier: workspace:*
         version: link:../packages/ui/buttons
+      '@ui/event-board':
+        specifier: workspace:*
+        version: link:../packages/ui/event-board
       '@ui/hooks':
         specifier: workspace:*
         version: link:../packages/ui/hooks
@@ -83,6 +89,18 @@ importers:
       '@ui/slider':
         specifier: workspace:*
         version: link:../packages/ui/slider
+      '@ui/stars-background':
+        specifier: workspace:*
+        version: link:../packages/ui/stars-background
+      '@ui/text-footer':
+        specifier: workspace:*
+        version: link:../packages/ui/text-footer
+      '@ui/text-header':
+        specifier: workspace:*
+        version: link:../packages/ui/text-header
+      '@ui/text-main':
+        specifier: workspace:*
+        version: link:../packages/ui/text-main
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.1.1)
@@ -151,6 +169,46 @@ importers:
         specifier: ^5.9.2
         version: 5.9.2
 
+  packages/ui/advertisements:
+    dependencies:
+      '@shared/consts':
+        specifier: workspace:*
+        version: link:../../shared/consts
+      '@shared/types':
+        specifier: workspace:*
+        version: link:../../shared/types
+      '@ui/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      lucide-react:
+        specifier: ^0.542.0
+        version: 0.542.0(react@18.3.1)
+      next:
+        specifier: ^15.5.3
+        version: 15.5.3(react-dom@19.1.1(react@18.3.1))(react@18.3.1)(sass@1.93.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      sass:
+        specifier: ^1.93.0
+        version: 1.93.1
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.2
+
   packages/ui/buttons:
     dependencies:
       embla-carousel-react:
@@ -169,6 +227,37 @@ importers:
       '@types/react':
         specifier: ^19.1.13
         version: 19.1.13
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  packages/ui/event-board:
+    dependencies:
+      embla-carousel-react:
+        specifier: ^8.6.0
+        version: 8.6.0(react@18.3.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.19
+        version: 6.1.19(react-dom@19.1.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
       '@types/styled-components':
         specifier: ^5.1.34
         version: 5.1.34
@@ -302,6 +391,139 @@ importers:
       sass:
         specifier: ^1.93.0
         version: 1.93.1
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.2
+
+  packages/ui/stars-background:
+    dependencies:
+      '@shared/consts':
+        specifier: workspace:*
+        version: link:../../shared/consts
+      '@shared/types':
+        specifier: workspace:*
+        version: link:../../shared/types
+      '@ui/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      lucide-react:
+        specifier: ^0.542.0
+        version: 0.542.0(react@18.3.1)
+      next:
+        specifier: ^15.5.3
+        version: 15.5.3(react-dom@19.1.1(react@18.3.1))(react@18.3.1)(sass@1.93.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      sass:
+        specifier: ^1.93.0
+        version: 1.93.1
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.2
+
+  packages/ui/text-footer:
+    dependencies:
+      embla-carousel-react:
+        specifier: ^8.6.0
+        version: 8.6.0(react@18.3.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.19
+        version: 6.1.19(react-dom@19.1.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.2
+
+  packages/ui/text-header:
+    dependencies:
+      embla-carousel-react:
+        specifier: ^8.6.0
+        version: 8.6.0(react@18.3.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.19
+        version: 6.1.19(react-dom@19.1.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.2
+
+  packages/ui/text-main:
+    dependencies:
+      embla-carousel-react:
+        specifier: ^8.6.0
+        version: 8.6.0(react@18.3.1)
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.19
+        version: 6.1.19(react-dom@19.1.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.17
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
       typescript:
         specifier: ^5.0.0
         version: 5.9.2

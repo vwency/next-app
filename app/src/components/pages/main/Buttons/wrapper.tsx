@@ -1,6 +1,6 @@
 import React from 'react'
-import MainLeftButton from './Left/wrapper'
-import MainRightButton from './Right/wrapper'
+import { MainLeftButton } from '@ui/buttons'
+import { MainRightButton } from '@ui/buttons'
 import '@/styles/MainLayout/Buttons/index.scss'
 
 const MainButtonsContent = (

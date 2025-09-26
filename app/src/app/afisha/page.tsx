@@ -3,8 +3,8 @@
 import React, { useRef } from 'react'
 import '@/styles/Global/index.scss'
 import { HeaderLayout } from '@ui/menu'
-import Stars from '@/components/global/stars'
-import GalleryNoModal from '@/components/pages/afisha/Content/NonModal'
+import { StarsBackground } from '@ui/stars-background'
+import { EventBoard } from '@ui/event-board'
 import RightButtonAfisha from '@/components/pages/afisha/Buttons/index'
 
 export default function Home() {
@@ -12,10 +12,10 @@ export default function Home() {
 
   return (
     <div style={{ height: '3000px' }}>
-      <Stars />
+      <StarsBackground />
       <HeaderLayout contentRef={mainContentRef} />
       <div ref={mainContentRef}>
-        <GalleryNoModal />
+        <EventBoard />
         <RightButtonAfisha />
       </div>
     </div>

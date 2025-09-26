@@ -10,6 +10,9 @@
       ],
       "@ui/*": [
         "packages/ui/*"
+      ],
+      "@landing/*": [
+        "packages/pages/landing/*"
       ]
     }
   }
