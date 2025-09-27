@@ -1,24 +1,28 @@
 FROM node:alpine AS base
-RUN npm install -g pnpm serve
+RUN apk add --no-cache libc6-compat rsync
+RUN npm install -g pnpm@10.15.1
+WORKDIR /app
 
 FROM base AS deps
-WORKDIR /app
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY pnpm-workspace.yaml package.json pnpm-lock.yaml ./
 COPY app/package.json ./app/
-COPY packages/ ./packages/
+COPY packages ./packages
 RUN pnpm install --frozen-lockfile
 
 FROM base AS builder
-WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+COPY --from=deps /app/packages ./packages
+COPY --from=deps /app/package.json ./app/
+COPY pnpm-workspace.yaml package.json pnpm-lock.yaml ./
+COPY app ./app
+COPY tsconfig.base.json ./
+RUN pnpm install
 RUN pnpm build
 
 FROM base AS runner
 WORKDIR /app
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-COPY --from=builder --chown=nextjs:nodejs /app/app/out ./out
+RUN addgroup --system --gid 1001 nodejs \
+  && adduser --system --uid 1001 nextjs
+COPY --from=builder --chown=nextjs:nodejs /app/app ./
 USER nextjs
-EXPOSE 3000
-CMD ["serve", "-s", "out", "-l", "3000"]
+CMD ["pnpm", "start"]
