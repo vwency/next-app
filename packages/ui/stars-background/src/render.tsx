@@ -1,6 +1,6 @@
 import { Star } from '@shared/types'
 import { STAR_CONFIG } from '@shared/consts'
-import '@/styles/Global/star.scss'
+import './styles/Global/star.scss'
 
 export const render = (
   ctx: CanvasRenderingContext2D,

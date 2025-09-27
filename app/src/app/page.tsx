@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef } from 'react'
-import MainLayout from '@/components/pages/main'
+import MainLayout from '@/components/pages/landing'
 import '@/styles/Global/index.scss'
 import { HeaderLayout } from '@ui/menu'
 import { StarsBackground } from '@ui/stars-background'
