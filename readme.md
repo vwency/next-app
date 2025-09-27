@@ -2,12 +2,14 @@
 
 #### docker less(dev)
 
-```
+``` install stage
 pnpm install
-yarn install
-npm install
 
-pnpm dev
+``` build stage
+pnpm build
+
+
+pnpm start
 ```
 
 #### docker
