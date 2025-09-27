@@ -62,41 +62,44 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="modal__content" onClick={(e) => e.stopPropagation()}>
-        <button
-          className="modal__close"
-          onClick={handleCloseClick}
-          aria-label="Закрыть модальное окно"
-          type="button"
-        >
-          <svg
-            width={CLOSE_ICON_SIZE}
-            height={CLOSE_ICON_SIZE}
-            viewBox="0 0 24 24"
-            fill="none"
+      <div className="modal__content__wrapper">
+        {' '}
+        <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+          <button
+            className="modal__close"
+            onClick={handleCloseClick}
+            aria-label="Закрыть модальное окно"
+            type="button"
           >
-            <path
-              d="M18 6L6 18M6 6L18 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+            <svg
+              width={CLOSE_ICON_SIZE}
+              height={CLOSE_ICON_SIZE}
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
 
-        <main className="modal__body" onClick={handleBodyClick}>
-          <h1 id="modal-title" className="modal__title">
-            Галерея картинок
-          </h1>
-          <CardGrid
-            items={galleryItems.map((item) => ({
-              ...item,
-              alt: item.alt || item.description,
-            }))}
-            onItemClick={handleItemClick}
-          />
-        </main>
+          <main className="modal__body" onClick={handleBodyClick}>
+            <h1 id="modal-title" className="modal__title">
+              Галерея картинок
+            </h1>
+            <CardGrid
+              items={galleryItems.map((item) => ({
+                ...item,
+                alt: item.alt || item.description,
+              }))}
+              onItemClick={handleItemClick}
+            />
+          </main>
+        </div>
       </div>
 
       {selectedItem && (
