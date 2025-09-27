@@ -4,11 +4,10 @@
 
 ``` install stage
 pnpm install
+```
 
-``` build stage
+``` install stage
 pnpm build
-
-
 pnpm start
 ```
 
