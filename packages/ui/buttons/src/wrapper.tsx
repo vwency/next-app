@@ -1,7 +1,7 @@
 import React from 'react'
-import { MainLeftButton } from '@ui/buttons'
-import { MainRightButton } from '@ui/buttons'
-import '@/styles/MainLayout/Buttons/index.scss'
+import { MainLeftButton } from './index'
+import { MainRightButton } from './index'
+import './styles/index.scss'
 
 const MainButtonsContent = (
   <div className="main__buttons">
