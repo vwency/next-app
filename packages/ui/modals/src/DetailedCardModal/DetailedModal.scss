@@ -14,8 +14,12 @@
 .modal-content {
   background: #000;
   border-radius: 12px;
-  padding: 20px;
+
+  // padding: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   max-width: 30vw;
+  margin-bottom: 10px;
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 8px 24px rgb(0, 0, 0, 0.3);
@@ -47,14 +51,13 @@
 }
 
 .modal-body {
-  padding-left: 0.6vw;
-  padding-right: 0.6vw;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .modal-content header h2 {
   margin: 0 0 10px;
   font-size: 1.4rem;
+  padding-top: 16px;
   text-align: center;
 }
 
@@ -86,5 +89,38 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media (width <= 500px) {
+  .modal-content {
+    max-width: 90vw;
+    width: 90vw;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .modal-content img {
+    height: 40vh;
+  }
+}
+
+/* 📱📲 Средние телефоны / маленькие планшеты */
+@media (width >= 501px) and (width <= 768px) {
+  .modal-content {
+    max-width: 70vw;
+    width: 70vw;
+  }
+
+  .modal-content img {
+    height: 50vh;
+  }
+}
+
+/* 💻 Планшеты в альбомной ориентации */
+@media (width >= 769px) and (width <= 1024px) {
+  .modal-content {
+    max-width: 50vw;
+    width: 50vw;
   }
 }

@@ -9,6 +9,7 @@
   "dependencies": {
     "@shared/consts": "workspace:*",
     "@ui/menu": "workspace:*",
+    "@ui/footer": "workspace:*",
     "@shared/interfaces": "workspace:*",
     "@shared/types": "workspace:*",
     "@ui/buttons": "workspace:*",

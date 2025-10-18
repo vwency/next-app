@@ -5,22 +5,22 @@ import MainMenu from '../MainMenu/MainMenu'
 import './styles/wrapper/index.scss'
 import { HeaderLayoutProps } from '@shared/interfaces'
 import { MAX_SCROLL_HIDE, SCROLL_SHOW_THRESHOLD } from '@shared/consts'
+import { useMainMenu } from '@ui/hooks' // ← используем хук
 
 const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
   const [translateY, setTranslateY] = useState(0)
   const lastScrollY = useRef(0)
   const accumulatedUpScroll = useRef(0)
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev)
+  const { isOpen, toggleMenu, menuRef } = useMainMenu(contentRef)
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
       const diff = currentScrollY - lastScrollY.current
 
-      if (diff > 0 && isMenuOpen) {
-        setIsMenuOpen(false)
+      if (diff > 0 && isOpen) {
+        toggleMenu()
       }
 
       if (diff > 0) {
@@ -46,25 +46,9 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [translateY, isMenuOpen])
+  }, [translateY, isOpen, toggleMenu])
 
   const translatePercent = (translateY / MAX_SCROLL_HIDE) * 100
-
-  const [menuHeight, setMenuHeight] = useState(0)
-  const menuRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (menuRef.current) {
-      setMenuHeight(menuRef.current.getBoundingClientRect().height)
-    }
-
-    if (contentRef?.current) {
-      contentRef.current.style.transform = isMenuOpen
-        ? `translateY(${menuHeight + 60}px)`
-        : 'translateY(0)'
-      contentRef.current.style.transition = 'transform 0.3s ease'
-    }
-  }, [isMenuOpen, contentRef, menuHeight])
 
   return (
     <div
@@ -77,7 +61,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
       <MainMenu
         ref={menuRef}
         contentRef={contentRef}
-        isOpen={isMenuOpen}
+        isOpen={isOpen}
         toggleMenu={toggleMenu}
       />
     </div>

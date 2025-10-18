@@ -10,7 +10,7 @@ const MainButtonsContent = (
   </div>
 )
 
-const MainButtons = () => {
+export const MainButtons = () => {
   return <>{MainButtonsContent}</>
 }
 

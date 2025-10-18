@@ -9,7 +9,7 @@ export const useMainMenu = (
   useEffect(() => {
     if (menuRef.current && contentRef?.current) {
       const menuHeight = isOpen ? menuRef.current.scrollHeight : 0
-      contentRef.current.style.marginTop = `${menuHeight + 30}px`
+      contentRef.current.style.marginTop = `${menuHeight + 10}px`
     }
   }, [isOpen, contentRef])
 
