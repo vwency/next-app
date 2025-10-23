@@ -3,13 +3,13 @@ import { CardGrid } from '@ui/advertisements'
 import { galleryItems } from './Items'
 import { DetailedModal } from '@ui/modals'
 import { CardItemProps, GalleryItem } from '@shared/interfaces'
-import './styles/index.scss'
+import styles from './styles/index.module.scss' // <- используем модуль
 
 export const EventBoard: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
 
   const handleItemClick = useCallback((item: CardItemProps) => {
-    console.log('activated elemnet', item)
+    console.log('activated element', item)
     requestAnimationFrame(() => {
       setSelectedItem({
         ...item,
@@ -21,8 +21,8 @@ export const EventBoard: React.FC = () => {
   const handleSelectedItemClose = useCallback(() => setSelectedItem(null), [])
 
   return (
-    <div className="gallery_wrapper">
-      <div className="gallery">
+    <div className={styles.galleryWrapper}>
+      <div className={styles.gallery}>
         <CardGrid
           items={galleryItems.map((item) => ({
             ...item,
@@ -42,10 +42,10 @@ export const EventBoard: React.FC = () => {
               alt={selectedItem.alt}
               loading="lazy"
               decoding="async"
-              className="gallery__image"
+              className={styles.galleryImage}
             />
             {selectedItem.detailedDescription && (
-              <p className="gallery__details">
+              <p className={styles.galleryDetails}>
                 {selectedItem.detailedDescription}
               </p>
             )}
