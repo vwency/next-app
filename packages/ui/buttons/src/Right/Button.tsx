@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/RightButton.scss'
+import styles from '../styles/index.module.scss'
 
 export interface RightButtonProps {
   children?: React.ReactNode
@@ -11,7 +11,7 @@ export const RightButton: React.FC<RightButtonProps> = ({
   onClick,
 }) => {
   return (
-    <button className="right-button" onClick={onClick}>
+    <button className={styles.right__button} onClick={onClick}>
       {children}
     </button>
   )

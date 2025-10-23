@@ -2,50 +2,50 @@
 
 import React, { forwardRef } from 'react'
 import Link from 'next/link'
-import './styles/index.scss'
+import styles from '../styles/index.module.scss'
 import { MainMenuProps } from '@shared/interfaces'
 
 const MainMenu = forwardRef<HTMLDivElement, MainMenuProps>(
   ({ contentRef, isOpen, toggleMenu }, ref) => {
     return (
-      <div className="menu_wrapper no-select" ref={ref}>
-        <div className="menu__logo">
-          <div className="menu__logo__text">КиноАфиша</div>
+      <div className={styles.menuWrapper} ref={ref}>
+        <div className={styles.menuLogo}>
+          <div className={styles.menuLogoText}>КиноАфиша</div>
         </div>
 
-        <div className="menu__options">
+        <div className={styles.menuOptions}>
           <button
-            className={`menu-toggle ${isOpen ? 'open' : ''}`}
+            className={`${styles.menuToggle} ${isOpen ? styles.open : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            <span className="bar" />
-            <span className="bar" />
-            <span className="bar" />
+            <span className={styles.bar} />
+            <span className={styles.bar} />
+            <span className={styles.bar} />
           </button>
 
-          <ul className={`list-inline ${isOpen ? 'active' : ''}`}>
-            <li className="list-inline__item">Премьеры</li>
-            <li className="list-inline__item">
+          <ul className={`${styles.listInline} ${isOpen ? styles.active : ''}`}>
+            <li className={styles.listInlineItem}>Премьеры</li>
+            <li className={styles.listInlineItem}>
               <Link href="/afisha">Афиша</Link>
             </li>
-            <li className="list-inline__item">Кинотеатры</li>
-            <li className="list-inline__item">О нас</li>
+            <li className={styles.listInlineItem}>Кинотеатры</li>
+            <li className={styles.listInlineItem}>О нас</li>
           </ul>
         </div>
 
-        <div className="menu__refferal">
-          <ul className="list-inline-refferal">
-            <li className="list-inline__item__refferal">
+        <div className={styles.menuRefferal}>
+          <ul className={styles.listInlineRefferal}>
+            <li className={styles.listInlineRefferalItem}>
               <img src="assets/mdi_github.svg" alt="GitHub" />
             </li>
-            <li className="list-inline__item__refferal">
+            <li className={styles.listInlineRefferalItem}>
               <img src="assets/mdi_discord.svg" alt="Discord" />
             </li>
-            <li className="list-inline__item__refferal">
+            <li className={styles.listInlineRefferalItem}>
               <img src="assets/mdi_reddit.svg" alt="Reddit" />
             </li>
-            <li className="list-inline__item__refferal">
+            <li className={styles.listInlineRefferalItem}>
               <img src="assets/mdi_twitter.svg" alt="Twitter" />
             </li>
           </ul>

@@ -1,8 +1,9 @@
 import React from 'react'
 import { RightButton } from './Button'
+import styles from '../styles/index.module.scss'
 
-export const MainRightButton = () => (
-  <div className="no-select main__button__right">
+export const MainRightButton: React.FC = () => (
+  <div className={styles.main__button__right}>
     <RightButton />
   </div>
 )

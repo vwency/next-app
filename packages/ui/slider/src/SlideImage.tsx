@@ -1,14 +1,16 @@
+'use client'
 import React, { memo } from 'react'
 import Image from 'next/image'
 import { SlideImageProps } from '@shared/types'
+import styles from './styles/index.module.scss'
 
 export const SlideImage = memo(({ src, index, priority }: SlideImageProps) => (
-  <div className="slider__slide">
+  <div className={styles.sliderSlide}>
     <Image
       src={src}
       alt={`Slide ${index + 1}`}
       fill
-      className="slider__image"
+      className={styles.sliderImage}
       priority={priority}
       sizes="100vw"
       quality={75}
@@ -20,5 +22,4 @@ export const SlideImage = memo(({ src, index, priority }: SlideImageProps) => (
 ))
 
 SlideImage.displayName = 'SlideImage'
-
 export default SlideImage

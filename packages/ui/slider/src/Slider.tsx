@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import SlideImage from './SlideImage'
 import { useAutoEmblaCarousel } from '@ui/hooks'
 import { SLIDER_IMAGES } from '@shared/consts'
+import styles from './styles/index.module.scss'
 
 export const Slider = () => {
   const { emblaRef, scrollPrev, scrollNext } = useAutoEmblaCarousel()
@@ -17,15 +18,15 @@ export const Slider = () => {
   )
 
   return (
-    <div className="slider">
-      <div className="slider__viewport" ref={emblaRef}>
-        <div className="slider__container">{slides}</div>
+    <div className={styles.slider}>
+      <div className={styles.sliderViewport} ref={emblaRef}>
+        <div className={styles.sliderContainer}>{slides}</div>
       </div>
 
-      <div className="slider__navigation">
+      <div className={styles.sliderNavigation}>
         <button
           onClick={scrollPrev}
-          className="slider__nav-button slider__nav-button--prev"
+          className={`${styles.sliderNavButton} ${styles.sliderNavButtonPrev}`}
           aria-label="Previous slide"
           type="button"
         >
@@ -33,7 +34,7 @@ export const Slider = () => {
         </button>
         <button
           onClick={scrollNext}
-          className="slider__nav-button slider__nav-button--next"
+          className={`${styles.sliderNavButton} ${styles.sliderNavButtonNext}`}
           aria-label="Next slide"
           type="button"
         >

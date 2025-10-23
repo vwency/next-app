@@ -1,0 +1,154 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.modalContent {
+  background: #000;
+  border-radius: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 30vw;
+  margin-bottom: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgb(0, 0, 0, 0.3);
+  animation: scaleIn 0.25s ease;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  color: #fff; // Добавлен цвет текста
+
+  img {
+    margin-top: 2%;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  header h2 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    padding-top: 16px;
+    text-align: center;
+    color: #fff; // Явно указан цвет
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+
+    button {
+      background: #444;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #222;
+      }
+    }
+  }
+
+  // Стили для текстового контента
+  p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+}
+
+.galleryDetails {
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #fff; // Добавлен цвет текста
+}
+
+.modalDetails {
+  text-align: center;
+  margin-top: 5%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #fff; // Добавлен цвет текста
+
+  p {
+    color: #fff;
+    line-height: 1.6;
+  }
+}
+
+.modalBody {
+  margin-top: 16px;
+  color: #fff; // Добавлен цвет текста
+
+  p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (width <= 500px) {
+  .modalContent {
+    max-width: 90vw;
+    width: 90vw;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    img {
+      height: 40vh;
+    }
+  }
+}
+
+@media (width >= 501px) and (width <= 768px) {
+  .modalContent {
+    max-width: 70vw;
+    width: 70vw;
+
+    img {
+      height: 50vh;
+    }
+  }
+}
+
+@media (width >= 769px) and (width <= 1024px) {
+  .modalContent {
+    max-width: 50vw;
+    width: 50vw;
+  }
+}

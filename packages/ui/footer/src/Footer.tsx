@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import './styles/footer.scss'
+import styles from './styles/index.module.scss'
 
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>(null)
@@ -17,16 +17,16 @@ const Footer: React.FC = () => {
   }, [])
 
   return (
-    <div className="footer_wrapper">
-      <div ref={footerRef} className="footer">
-        <div className="container">
-          <div className="brand">
+    <div className={styles.footer_wrapper}>
+      <div ref={footerRef} className={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.brand}>
             <h2>MyBrand</h2>
             <p>© {new Date().getFullYear()} MyBrand. All rights reserved.</p>
           </div>
 
-          <div className="links">
-            <div className="linkGroup">
+          <div className={styles.links}>
+            <div className={styles.linkGroup}>
               <h4>Company</h4>
               <ul>
                 <li>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="linkGroup">
+            <div className={styles.linkGroup}>
               <h4>Resources</h4>
               <ul>
                 <li>
@@ -56,9 +56,9 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="linkGroup">
+            <div className={styles.linkGroup}>
               <h4>Follow Us</h4>
-              <div className="socials">
+              <div className={styles.socials}>
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -88,4 +88,5 @@ const Footer: React.FC = () => {
     </div>
   )
 }
+
 export { Footer }

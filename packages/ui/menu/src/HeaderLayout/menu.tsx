@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import MainMenu from '../MainMenu/MainMenu'
-import './styles/wrapper/index.scss'
+import styles from '../styles/index.module.scss'
 import { HeaderLayoutProps } from '@shared/interfaces'
 import { MAX_SCROLL_HIDE, SCROLL_SHOW_THRESHOLD } from '@shared/consts'
-import { useMainMenu } from '@ui/hooks' // ← используем хук
+import { useMainMenu } from '@ui/hooks'
 
 const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
   const [translateY, setTranslateY] = useState(0)
@@ -52,7 +52,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
 
   return (
     <div
-      className="header_wrapper no-select"
+      className={`${styles.headerWrapper}`}
       style={{
         transform: `translateY(-${translatePercent}%)`,
         transition: 'transform 0.1s linear',

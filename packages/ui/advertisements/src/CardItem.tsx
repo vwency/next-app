@@ -1,6 +1,7 @@
 'use client'
+
 import React, { useRef, useMemo, useCallback, useState, useEffect } from 'react'
-import './styles/card/items.scss'
+import styles from './styles/card/index.module.scss'
 import { useCardItemHover } from '@ui/hooks'
 import { CardItemProps } from '@shared/interfaces'
 
@@ -64,7 +65,10 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
     }, [heights, isHovered, detailedDescription, supportsHover])
 
     const cardClassName = useMemo(
-      () => `card-item ${!detailedDescription ? 'no-description' : ''}`,
+      () =>
+        `${styles.cardItem} ${
+          !detailedDescription ? styles.noDescription : ''
+        }`,
       [detailedDescription]
     )
 
@@ -75,16 +79,16 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
         onMouseLeave={handleMouseLeave}
         style={cardStyles}
       >
-        <div className="card-item__image" ref={imageRef}>
+        <div className={styles.cardItemImage} ref={imageRef}>
           <img src={image} alt={alt} loading="lazy" decoding="async" />
         </div>
-        <div ref={descriptionRef} className="card-item__description">
+        <div ref={descriptionRef} className={styles.cardItemDescription}>
           {description}
         </div>
         {detailedDescription && (
           <div
             ref={detailedRef}
-            className="card-item__detailed"
+            className={styles.cardItemDetailed}
             style={detailedStyles}
           >
             {detailedDescription}
@@ -99,3 +103,5 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
     prev.description === next.description &&
     prev.detailedDescription === next.detailedDescription
 )
+
+export default CardItem

@@ -1,15 +1,15 @@
 'use client'
 
 import React from 'react'
-import { Slider } from './Slider'
-import './styles/slider.scss'
-
-const MainSliderContent = (
-  <div className="slider__wrapper">
-    <Slider />
-  </div>
-)
+import Slider from './Slider'
+import styles from './styles/index.module.scss'
 
 export const MainSlider = () => {
-  return <>{MainSliderContent}</>
+  return (
+    <div className={styles.sliderWrapper}>
+      <Slider />
+    </div>
+  )
 }
+
+export default MainSlider

@@ -1,16 +1,16 @@
 import React from 'react'
 import { MainLeftButton } from './index'
 import { MainRightButton } from './index'
-import './styles/index.scss'
+import styles from './styles/index.module.scss'
 
 const MainButtonsContent = (
-  <div className="main__buttons">
+  <div className={styles.main__buttons}>
     <MainLeftButton />
     <MainRightButton />
   </div>
 )
 
-export const MainButtons = () => {
+export const MainButtons: React.FC = () => {
   return <>{MainButtonsContent}</>
 }
 

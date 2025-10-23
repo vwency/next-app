@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import '../styles/LeftButton.scss'
+import styles from '../styles/index.module.scss'
 import { MainPageModal } from '@ui/modals'
 import { useModal } from '@ui/hooks'
 
@@ -8,7 +8,11 @@ export const LeftButtonMain: FC = () => {
 
   return (
     <>
-      <button className="main__button__left" onClick={openModal} type="button">
+      <button
+        className={styles.main__button__left}
+        onClick={openModal}
+        type="button"
+      >
         Смотреть
       </button>
 

@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { ModalProps } from '@shared/interfaces'
 import { useModalClose } from '@ui/hooks'
-import './DetailedModal.scss'
+import styles from './index.module.scss'
 
 export const DetailedModal: React.FC<ModalProps> = ({
   isOpen,
@@ -20,27 +20,35 @@ export const DetailedModal: React.FC<ModalProps> = ({
     ? (document.getElementById(portalRootId) ?? document.body)
     : document.body
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    handleOverlayClick(e)
+  }
+
   return createPortal(
     <div
       ref={modalRef}
-      className="modal-overlay"
-      onClick={handleOverlayClick}
+      className={styles.modalOverlay}
+      onClick={handleClick}
       role="dialog"
       aria-modal="true"
       aria-label={title ?? 'modal'}
       tabIndex={-1}
     >
       <div
-        className="modal-content"
+        className={styles.modalContent}
         role="document"
         aria-labelledby={title ? 'modal-title' : undefined}
+        onClick={(e) => e.stopPropagation()}
       >
         {title && (
           <header>
             <h2 id="modal-title">{title}</h2>
           </header>
         )}
-        <div className="modal-body">{children}</div>
+        <div className={styles.modalBody}>
+          <div>{children}</div>
+        </div>
         <footer>
           <button type="button" onClick={onClose} aria-label="Close modal">
             Close

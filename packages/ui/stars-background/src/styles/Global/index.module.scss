@@ -1,14 +1,15 @@
-@import "./background";
+@use "./background" as *;
 
-*,
-*::before,
-*::after {
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:global(*),
+:global(*::before),
+:global(*::after) {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
+:global(html) {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -17,111 +18,111 @@ html {
   -ms-overflow-style: none;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+:global(html::-webkit-scrollbar),
+:global(body::-webkit-scrollbar) {
   display: none;
 }
 
-ul,
-ol {
+:global(ul),
+:global(ol) {
   list-style: none;
 }
 
-a {
+:global(a) {
   text-decoration: none;
   color: inherit;
 }
 
-img {
+:global(img) {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-input,
-button,
-textarea,
-select {
+:global(input),
+:global(button),
+:global(textarea),
+:global(select) {
   font: inherit;
 }
 
-table {
+:global(table) {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
 }
 
-main,
-header,
-footer,
-section,
-article,
-aside,
-nav {
+:global(main),
+:global(header),
+:global(footer),
+:global(section),
+:global(article),
+:global(aside),
+:global(nav) {
   display: block;
 }
 
-button {
+:global(button) {
   cursor: pointer;
   background: none;
   border: none;
 }
 
-:focus {
+:global(:focus) {
   outline: 2px solid rgb(255, 255, 255, 0.5);
   outline-offset: 2px;
 }
 
-* {
+:global(*) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
 }
 
-img,
-video,
-canvas,
-svg {
+:global(img),
+:global(video),
+:global(canvas),
+:global(svg) {
   max-width: 100%;
   height: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
+  :global(*) {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-  html {
+  :global(html) {
     scroll-behavior: auto;
   }
 }
 
-.no-select {
+:global(.no-select) {
   user-select: none;
 }
 
 @media (width <= 1200px) {
-  html {
+  :global(html) {
     font-size: 15px;
   }
 }
 
 @media (width <= 992px) {
-  html {
+  :global(html) {
     font-size: 14px;
   }
 }
 
 @media (width <= 768px) {
-  html {
+  :global(html) {
     font-size: 13px;
   }
 }
 
 @media (width <= 480px) {
-  html {
+  :global(html) {
     font-size: 12px;
   }
 }

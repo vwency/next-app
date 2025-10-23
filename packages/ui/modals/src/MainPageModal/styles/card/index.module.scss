@@ -1,4 +1,4 @@
-.modal__overlay {
+.modalOverlay {
   display: flex;
   position: fixed;
   top: 0;
@@ -15,7 +15,21 @@
   z-index: 1000;
 }
 
-.modal__content__wrapper {
+.modalDetails {
+  text-align: center;
+  margin-top: 5%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #fff; // Добавлен цвет текста
+
+  p {
+    color: #fff;
+    line-height: 1.6;
+  }
+}
+
+.modalContentWrapper {
   display: flex;
   justify-content: center;
   background: black;
@@ -28,7 +42,7 @@
     inset 0 1px 0 rgb(255, 255, 255, 0.1);
 }
 
-.modal__content {
+.modalContent {
   width: 80%;
   color: #fff;
   padding: 0;
@@ -37,25 +51,25 @@
   overflow: hidden;
 }
 
-.modal__title {
+.modalTitle {
   text-align: center;
 }
 
-.modal__overlay.modal--open {
+.modalOpen {
   opacity: 1;
   visibility: visible;
   background: rgb(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
 }
 
-.modal__overlay.modal--close {
+.modalCloseState {
   opacity: 0;
   visibility: hidden;
   background: transparent;
   backdrop-filter: blur(0);
 }
 
-.modal__close {
+.modalClose {
   position: absolute;
   top: 20px;
   right: 10px;
@@ -94,16 +108,16 @@
   }
 }
 
-.modal__body {
+.modalBody {
   width: 100%;
   height: auto;
   padding: 0;
 }
 
-.modal__overlay.modal--open .modal__content {
+.modalOpen .modalContent {
   transform: scale(1) translateY(0);
 }
 
-.modal__overlay.modal--close .modal__content {
+.modalCloseState .modalContent {
   transform: scale(0.85) translateY(20px);
 }

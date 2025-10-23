@@ -1,9 +1,11 @@
 import React from 'react'
-import './styles/index.scss'
+import styles from './styles/index.module.scss'
 import FooterText from './text'
 
 const textHeadContent = (
-  <div className="no-select main__footer__text__wrapper">
+  <div
+    className={`${styles['no-select']} ${styles.main__footer__text__wrapper}`}
+  >
     <FooterText />
   </div>
 )

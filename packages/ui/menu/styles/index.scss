@@ -1,6 +1,6 @@
-@import "./logo";
-@import "./options";
-@import "./referral";
+@use "./logo" as *;
+@use "./options" as *;
+@use "./referral" as *;
 
 .menu_wrapper {
   margin: 0.4vh auto;

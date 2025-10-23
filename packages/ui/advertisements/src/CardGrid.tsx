@@ -1,6 +1,8 @@
+'use client'
+
 import React, { useCallback, useMemo } from 'react'
 import { CardItem } from './CardItem'
-import './styles/card/grid.scss'
+import styles from './styles/card/index.module.scss'
 import { CardGridProps, CardItemProps } from '@shared/interfaces'
 
 const CardGridComponent: React.FC<CardGridProps> = ({ items, onItemClick }) => {
@@ -26,10 +28,11 @@ const CardGridComponent: React.FC<CardGridProps> = ({ items, onItemClick }) => {
   const itemWrapperStyle = useMemo(() => ({ cursor: 'pointer' as const }), [])
 
   return (
-    <div className="card-grid">
+    <div className={styles.cardGrid}>
       {items.map((item, index) => (
         <div
           key={`${item.image}-${item.description}-${index}`}
+          className={styles.cardGridItem}
           role="button"
           tabIndex={0}
           aria-label={`Открыть ${item.description}`}

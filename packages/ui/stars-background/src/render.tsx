@@ -1,27 +1,19 @@
 import { Star } from '@shared/types'
 import { STAR_CONFIG } from '@shared/consts'
-import './styles/Global/star.scss'
+
+const STAR_BASE = '255, 255, 255'
+const STAR_GLOW_1 = '255, 230, 180'
+const STAR_GLOW_2 = '255, 200, 100'
+const STAR_BG = '#000814'
+const MIN_OPACITY = 0.25
+const GLOW_OPACITY_MULT = 0.4
+const GLOW_SCALE = 0.5
 
 export const render = (
   ctx: CanvasRenderingContext2D,
   canvas: HTMLCanvasElement,
   starsRef: React.MutableRefObject<Star[]>
 ) => {
-  const style = getComputedStyle(document.documentElement)
-
-  const STAR_BASE = style.getPropertyValue('--star-base-color') || '255,255,255'
-  const STAR_GLOW_1 =
-    style.getPropertyValue('--star-glow-color-1') || '255,230,180'
-  const STAR_GLOW_2 =
-    style.getPropertyValue('--star-glow-color-2') || '255,200,100'
-  const STAR_BG = style.getPropertyValue('--star-background-color') || '#000814'
-  const MIN_OPACITY =
-    parseFloat(style.getPropertyValue('--star-min-opacity')) || 0.25
-  const GLOW_OPACITY_MULT =
-    parseFloat(style.getPropertyValue('--star-glow-opacity-multiplier')) || 0.4
-  const GLOW_SCALE =
-    parseFloat(style.getPropertyValue('--star-glow-scale-factor')) || 0.5
-
   ctx.fillStyle = STAR_BG
   ctx.fillRect(0, 0, canvas.width, canvas.height)
 

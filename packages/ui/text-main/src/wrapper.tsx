@@ -1,9 +1,9 @@
 import React from 'react'
-import './styles/index.scss'
+import styles from './styles/index.module.scss'
 import TextMain from './text'
 
 const wrapper = (
-  <div className="no-select main__text__main__wrapper">
+  <div className={`${styles['no-select']} ${styles.main__text__main__wrapper}`}>
     <TextMain />
   </div>
 )

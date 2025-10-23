@@ -2,7 +2,7 @@ import React from 'react'
 import { LeftButtonMain } from './Button'
 
 export const MainLeftButton = () => (
-  <div className=" ">
+  <div>
     <LeftButtonMain />
   </div>
 )

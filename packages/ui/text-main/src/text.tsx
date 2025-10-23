@@ -1,8 +1,10 @@
 import React from 'react'
-import './styles/index.scss'
+import styles from './styles/index.module.scss'
 
 const MainTextContent = (
-  <div className="no-select main_text">Бронирование билетов</div>
+  <div className={`${styles['no-select']} ${styles.main_text}`}>
+    Бронирование билетов
+  </div>
 )
 
 export const TextMain = () => {

@@ -5,7 +5,8 @@ import { CardGrid } from '@ui/advertisements'
 import { galleryItems } from './Items'
 import { DetailedModal } from '../index'
 import { CardItemProps, GalleryItem, ModalProps } from '@shared/interfaces'
-import './styles/card/index.scss'
+import styles from './styles/card/index.module.scss'
+
 const CLOSE_ICON_SIZE = 20
 const MODAL_CLOSE_TIMEOUT = 300
 
@@ -42,19 +43,25 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
 
   const handleBodyClick = useCallback(
     (e: React.MouseEvent) => {
-      if (!(e.target as HTMLElement).closest('.card-item')) onClose()
+      // Убираем проверку на card-item, так как DetailedModal теперь вне этого контекста
+      if (e.target === e.currentTarget) {
+        onClose()
+      }
     },
     [onClose]
   )
 
   const overlayClassName = useMemo(
-    () => `modal__overlay ${isOpen ? 'modal--open' : 'modal--close'}`,
+    () =>
+      `${styles.modalOverlay} ${
+        isOpen ? styles.modalOpen : styles.modalCloseState
+      }`,
     [isOpen]
   )
 
   if (!mounted || (!isOpen && !animating)) return null
 
-  const modalElement = (
+  const mainModal = (
     <div
       className={overlayClassName}
       onClick={handleOverlayClick}
@@ -62,11 +69,13 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="modal__content__wrapper">
-        {' '}
-        <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+      <div className={styles.modalContentWrapper}>
+        <div
+          className={styles.modalContent}
+          onClick={(e) => e.stopPropagation()}
+        >
           <button
-            className="modal__close"
+            className={styles.modalClose}
             onClick={handleCloseClick}
             aria-label="Закрыть модальное окно"
             type="button"
@@ -87,8 +96,8 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
             </svg>
           </button>
 
-          <main className="modal__body" onClick={handleBodyClick}>
-            <h1 id="modal-title" className="modal__title">
+          <main className={styles.modalBody}>
+            <h1 id="modal-title" className={styles.modalTitle}>
               Галерея картинок
             </h1>
             <CardGrid
@@ -101,7 +110,12 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
           </main>
         </div>
       </div>
+    </div>
+  )
 
+  return (
+    <>
+      {createPortal(mainModal, document.body)}
       {selectedItem && (
         <DetailedModal
           isOpen={!!selectedItem}
@@ -113,17 +127,17 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
             alt={selectedItem.alt}
             loading="lazy"
             decoding="async"
-            className="modal__image"
+            className={styles.modalImage}
           />
           {selectedItem.detailedDescription && (
-            <p className="modal__details">{selectedItem.detailedDescription}</p>
+            <p className={styles.modalDetails}>
+              {selectedItem.detailedDescription}
+            </p>
           )}
         </DetailedModal>
       )}
-    </div>
+    </>
   )
-
-  return createPortal(modalElement, document.body)
 }
 
 export const MainPageModal = React.memo(ModalWithGalleryComponent)

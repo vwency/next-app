@@ -1,8 +1,8 @@
 import React from 'react'
-import './styles/index.scss'
+import styles from './styles/index.module.scss'
 
 export const FooterTextContent = (
-  <div className="no-select footer_text">
+  <div className={`${styles['no-select']} ${styles.footer_text}`}>
     Our technology performing fast blockchain (120K TPS) and it has guaranteed
     AI-based data security. Proof of Stake, its consensus algorithm enables
     unlimited speeds.

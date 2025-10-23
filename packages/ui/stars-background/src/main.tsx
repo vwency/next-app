@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback } from 'react'
 import { Star } from '@shared/types'
 import { initializeStars } from './init'
 import { animate } from './animate'
-import '@/styles/Global/index.scss'
+import styles from './styles/Global/index.module.scss'
 
 export default function OptimizedStarsBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -38,8 +38,8 @@ export default function OptimizedStarsBackground() {
   }, [handleResize])
 
   return (
-    <div className="stars-wrapper">
-      <canvas ref={canvasRef} className="stars-canvas" />
+    <div className={styles['stars-wrapper']}>
+      <canvas ref={canvasRef} className={styles['stars-canvas']} />
     </div>
   )
 }

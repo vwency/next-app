@@ -1,4 +1,4 @@
-.fast_text {
+.fastText {
   font-family: Orbitron, sans-serif;
   font-size: clamp(4rem, 5vw, 5rem);
   font-weight: 700;
@@ -46,9 +46,13 @@
   }
 }
 
-.main__fast__text__wrapper {
+.mainFastTextWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+
+.noSelect {
+  user-select: none;
 }

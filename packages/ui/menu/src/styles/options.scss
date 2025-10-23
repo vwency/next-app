@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.list-inline {
+.list__inline {
   list-style: none;
   z-index: 100;
   gap: 3.5vw;
@@ -50,7 +50,7 @@
   }
 }
 
-.menu-toggle {
+.menu__toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -88,7 +88,7 @@
     display: flex;
   }
 
-  .list-inline {
+  .list__inline {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -114,7 +114,7 @@
       visibility: visible;
       transform: translateY(0);
       display: flex;
-      margin-top: -5px;
+      margin-top: -40px;
     }
 
     &__item {

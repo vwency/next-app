@@ -1,4 +1,34 @@
-.menu__options {
+@use "./logo" as *;
+@use "./options" as *;
+@use "./referral" as *;
+
+.menuWrapper {
+  margin: 0.4vh auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+}
+
+.menuLogo {
+  text-align: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+
+  &Text {
+    color: #fff;
+    font-family: Chillax;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.menuOptions {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -7,7 +37,7 @@
   position: relative;
 }
 
-.list-inline {
+.listInline {
   list-style: none;
   z-index: 100;
   gap: 3.5vw;
@@ -15,7 +45,7 @@
   margin: 0;
   display: flex;
 
-  &__item {
+  &Item {
     text-decoration: none;
     display: flex;
     width: 120px;
@@ -33,7 +63,7 @@
       border-radius: 15px;
     }
 
-    &__refferal {
+    &Refferal {
       text-decoration: none;
       align-items: center;
       color: #fff;
@@ -50,7 +80,7 @@
   }
 }
 
-.menu-toggle {
+.menuToggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -84,11 +114,11 @@
 }
 
 @media (width <= 768px) {
-  .menu-toggle {
+  .menuToggle {
     display: flex;
   }
 
-  .list-inline {
+  .listInline {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -117,7 +147,7 @@
       margin-top: -40px;
     }
 
-    &__item {
+    &Item {
       font-size: 1.25rem;
     }
   }
@@ -125,8 +155,69 @@
 
 @supports not (backdrop-filter: blur(15px)) {
   @media (width <= 768px) {
-    .list-inline {
+    .listInline {
       background: rgb(17, 17, 17, 0.95);
     }
+  }
+}
+
+.menuRefferal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.listInlineRefferal {
+  list-style: none;
+  gap: 0.5vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  &Item {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (width <= 768px) {
+  .menuRefferal {
+    display: none;
+  }
+}
+
+@media (width <= 576px) {
+  .menuRefferal {
+    display: none;
+  }
+}
+
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: rgb(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+}
+
+@media (width <= 480px) {
+  .headerWrapper {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+@media (width <= 768px) {
+  .headerWrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
