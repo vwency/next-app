@@ -19,10 +19,8 @@
   "dependencies": {
     "@shared/interfaces": "workspace:*",
     "@shared/consts": "workspace:*",
-    "embla-carousel-react": "^8.6.0",
     "next": "16.0.0",
-    "react-dom": "19.2.0",
-    "styled-components": "^6.1.19"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",

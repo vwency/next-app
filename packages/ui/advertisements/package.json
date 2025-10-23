@@ -19,16 +19,12 @@
   "dependencies": {
     "@shared/types": "workspace:*",
     "@ui/hooks": "workspace:*",
-    "@shared/consts": "workspace:*",
-    "lucide-react": "^0.546.0",
-    "next": "16.0.0",
-    "react-dom": "19.2.0"
+    "@shared/consts": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",
     "@types/react": "19.2.2",
     "@types/styled-components": "^5.1.34",
-    "sass": "^1.93.0",
     "typescript": "^5.0.0"
   }
 }
