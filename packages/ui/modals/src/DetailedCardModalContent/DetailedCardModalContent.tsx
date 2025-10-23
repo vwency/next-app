@@ -10,7 +10,7 @@ import styles from './styles/card/index.module.scss'
 const CLOSE_ICON_SIZE = 20
 const MODAL_CLOSE_TIMEOUT = 300
 
-const ModalWithGalleryComponent: React.FC<ModalProps> = ({
+const DetailedCardModalContent: React.FC<ModalProps> = ({
   isOpen,
   onClose,
 }) => {
@@ -43,7 +43,6 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
 
   const handleBodyClick = useCallback(
     (e: React.MouseEvent) => {
-      // Убираем проверку на card-item, так как DetailedModal теперь вне этого контекста
       if (e.target === e.currentTarget) {
         onClose()
       }
@@ -140,4 +139,4 @@ const ModalWithGalleryComponent: React.FC<ModalProps> = ({
   )
 }
 
-export const MainPageModal = React.memo(ModalWithGalleryComponent)
+export const MainPageModal = React.memo(DetailedCardModalContent)

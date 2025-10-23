@@ -1,2 +1,2 @@
 export * from './DetailedCardModal/DetailedModal'
-export * from './MainPageModal/ModalWithGallery'
+export * from './DetailedCardModalContent/DetailedCardModalContent'

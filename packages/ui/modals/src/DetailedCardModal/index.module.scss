@@ -24,7 +24,7 @@
   animation: scaleIn 0.25s ease;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  color: #fff; // Добавлен цвет текста
+  color: #fff;
 
   img {
     margin-top: 2%;
@@ -39,7 +39,7 @@
     font-size: 1.4rem;
     padding-top: 16px;
     text-align: center;
-    color: #fff; // Явно указан цвет
+    color: #fff;
   }
 
   footer {
@@ -61,7 +61,6 @@
     }
   }
 
-  // Стили для текстового контента
   p {
     color: #fff;
     line-height: 1.6;
@@ -78,30 +77,9 @@
   }
 }
 
-.galleryDetails {
-  margin-top: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
-  color: #fff; // Добавлен цвет текста
-}
-
-.modalDetails {
-  text-align: center;
-  margin-top: 5%;
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  color: #fff; // Добавлен цвет текста
-
-  p {
-    color: #fff;
-    line-height: 1.6;
-  }
-}
-
 .modalBody {
   margin-top: 16px;
-  color: #fff; // Добавлен цвет текста
+  color: #fff;
 
   p {
     color: #fff;
