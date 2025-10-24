@@ -7,15 +7,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@ui/menu": "workspace:*",
-    "@ui/footer": "workspace:*",
-    "@ui/buttons": "workspace:*",
-    "@ui/stars-background": "workspace:*",
-    "@ui/slider": "workspace:*",
-    "@ui/event-board": "workspace:*",
-    "@ui/text-footer": "workspace:*",
-    "@ui/text-header": "workspace:*",
-    "@ui/text-main": "workspace:*",
+    "@pages/landing": "workspace:*",
+    "@pages/afisha": "workspace:*",
     "react": "^19.1.1",
     "react-dom": "19.2.0"
   },

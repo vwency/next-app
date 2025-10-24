@@ -62,33 +62,18 @@ importers:
 
   app:
     dependencies:
-      '@ui/buttons':
+      '@pages/afisha':
         specifier: workspace:*
-        version: link:../packages/ui/buttons
-      '@ui/event-board':
+        version: link:../pages/afisha
+      '@pages/landing':
         specifier: workspace:*
-        version: link:../packages/ui/event-board
-      '@ui/footer':
-        specifier: workspace:*
-        version: link:../packages/ui/footer
+        version: link:../pages/landing
       '@ui/menu':
         specifier: workspace:*
         version: link:../packages/ui/menu
-      '@ui/slider':
-        specifier: workspace:*
-        version: link:../packages/ui/slider
       '@ui/stars-background':
         specifier: workspace:*
         version: link:../packages/ui/stars-background
-      '@ui/text-footer':
-        specifier: workspace:*
-        version: link:../packages/ui/text-footer
-      '@ui/text-header':
-        specifier: workspace:*
-        version: link:../packages/ui/text-header
-      '@ui/text-main':
-        specifier: workspace:*
-        version: link:../packages/ui/text-main
       react:
         specifier: ^19.1.1
         version: 19.2.0
@@ -461,6 +446,77 @@ importers:
         version: 5.1.34
       typescript:
         specifier: ^5.0.0
+        version: 5.9.2
+
+  pages/afisha:
+    dependencies:
+      '@ui/event-board':
+        specifier: workspace:*
+        version: link:../../packages/ui/event-board
+      '@ui/menu':
+        specifier: workspace:*
+        version: link:../../packages/ui/menu
+      '@ui/stars-background':
+        specifier: workspace:*
+        version: link:../../packages/ui/stars-background
+      react:
+        specifier: ^19.1.1
+        version: 19.2.0
+    devDependencies:
+      '@types/node':
+        specifier: ^24.9.1
+        version: 24.9.1
+      '@types/react':
+        specifier: 19.2.2
+        version: 19.2.2
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  pages/landing:
+    dependencies:
+      '@ui/buttons':
+        specifier: workspace:*
+        version: link:../../packages/ui/buttons
+      '@ui/footer':
+        specifier: workspace:*
+        version: link:../../packages/ui/footer
+      '@ui/menu':
+        specifier: workspace:*
+        version: link:../../packages/ui/menu
+      '@ui/slider':
+        specifier: workspace:*
+        version: link:../../packages/ui/slider
+      '@ui/stars-background':
+        specifier: workspace:*
+        version: link:../../packages/ui/stars-background
+      '@ui/text-footer':
+        specifier: workspace:*
+        version: link:../../packages/ui/text-footer
+      '@ui/text-header':
+        specifier: workspace:*
+        version: link:../../packages/ui/text-header
+      '@ui/text-main':
+        specifier: workspace:*
+        version: link:../../packages/ui/text-main
+      react:
+        specifier: ^19.1.1
+        version: 19.2.0
+    devDependencies:
+      '@types/node':
+        specifier: ^24.9.1
+        version: 24.9.1
+      '@types/react':
+        specifier: 19.2.2
+        version: 19.2.2
+      '@types/styled-components':
+        specifier: ^5.1.34
+        version: 5.1.34
+      typescript:
+        specifier: ^5.9.2
         version: 5.9.2
 
 packages:
