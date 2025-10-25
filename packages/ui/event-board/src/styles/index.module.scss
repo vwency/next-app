@@ -9,3 +9,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.galleryDetails {
+  text-align: center;
+  margin-top: 5%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #fff; // Добавлен цвет текста
+
+  p {
+    color: #fff;
+    line-height: 1.6;
+  }
+}

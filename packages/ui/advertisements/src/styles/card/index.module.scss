@@ -13,7 +13,19 @@
   }
 }
 
+.cardGridItem {
+  outline: none;
+}
+
 .cardGridItem > div {
+  outline: none;
+}
+
+.cardGridItem:focus {
+  outline: none;
+}
+
+.cardGridItem:focus-visible {
   outline: none;
 }
 
@@ -102,8 +114,4 @@
     height 0.2s ease,
     padding 0.2s ease;
   flex-shrink: 0;
-}
-
-.noDescription {
-  /* можно оставить пустым или добавить стили для карточек без подробностей */
 }

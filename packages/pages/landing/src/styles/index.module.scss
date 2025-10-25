@@ -1,0 +1,22 @@
+.container {
+  height: 3000px;
+  padding-top: 10vh;
+}
+
+@media (width <= 1024px) {
+  .container {
+    padding-top: 10vh;
+  }
+}
+
+@media (width <= 600px) {
+  .container {
+    padding-top: 8vh;
+  }
+}
+
+@media (width <= 400px) {
+  .container {
+    padding-top: 6vh;
+  }
+}
