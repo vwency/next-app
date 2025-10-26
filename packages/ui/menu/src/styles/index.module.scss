@@ -10,6 +10,14 @@
   width: 90vw;
 }
 
+.listInlineItem a {
+  outline: none;
+}
+
+.listInlineItem a:focus {
+  outline: none;
+}
+
 .menuLogo {
   text-align: center;
   box-sizing: border-box;

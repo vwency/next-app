@@ -3,7 +3,7 @@ import { CardGrid } from '@ui/advertisements'
 import { galleryItems } from './Items'
 import { DetailedModal } from '@ui/modals'
 import { CardItemProps, GalleryItem } from '@shared/interfaces'
-import styles from './styles/index.module.scss' // <- используем модуль
+import styles from './styles/index.module.scss'
 
 export const EventBoard: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
