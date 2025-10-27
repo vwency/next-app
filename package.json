@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.15.1",
   "scripts": {
     "dev": "pnpm --filter app dev",
-    "build": "pnpm -r run build",
+    "build": "pnpm -r --sort build",
     "start": "pnpm --filter app start",
     "prepare": "husky install",
     "install:all": "pnpm install"
