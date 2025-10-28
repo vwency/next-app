@@ -19,6 +19,7 @@
   "dependencies": {
     "@shared/interfaces": "workspace:*",
     "@shared/consts": "workspace:*",
+    "@ui/hooks": "workspace:*",
     "next": "16.0.0",
     "react-dom": "19.2.0"
   },

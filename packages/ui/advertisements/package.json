@@ -19,7 +19,9 @@
   "dependencies": {
     "@shared/types": "workspace:*",
     "@ui/hooks": "workspace:*",
-    "@shared/consts": "workspace:*"
+    "@shared/consts": "workspace:*",
+    "@ui/advertisements": "workspace:*",
+    "@shared/interfaces": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",

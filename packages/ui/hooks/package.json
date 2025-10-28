@@ -17,7 +17,8 @@
     "react": "^19.2.0"
   },
   "dependencies": {
-    "embla-carousel-react": "^8.6.0"
+    "embla-carousel-react": "^8.6.0",
+    "@shared/consts": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",
