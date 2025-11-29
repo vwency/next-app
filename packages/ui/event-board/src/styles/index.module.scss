@@ -1,25 +1,7 @@
-.gallery {
-  width: calc(90vw + 5px);
-}
-
-.galleryWrapper {
-  margin-top: 5vh;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.galleryDetails {
-  text-align: center;
-  margin-top: 5%;
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  color: #fff; // Добавлен цвет текста
-
-  p {
-    color: #fff;
-    line-height: 1.6;
-  }
-}
+@use "./overlay";
+@use "./details";
+@use "./content";
+@use "./states";
+@use "./close-btn";
+@use "./body";
+@use "./gallery";

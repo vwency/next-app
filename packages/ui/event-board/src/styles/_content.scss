@@ -1,0 +1,26 @@
+.modalContentWrapper {
+  display: flex;
+  justify-content: center;
+  background: black;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  box-shadow:
+    0 25px 50px -12px rgb(0, 0, 0, 0.8),
+    0 0 0 1px rgb(255, 255, 255, 0.05),
+    inset 0 1px 0 rgb(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+
+.modalContent {
+  width: 100%;
+  color: #fff;
+  padding: 0;
+  transform: scale(0.85) translateY(20px);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: visible;
+}
+
+.modalTitle {
+  text-align: center;
+}

@@ -10,7 +10,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0',
+      'https://s1ru1.kinoplan24.ru/443/0406060507275a7b66a860ce/10067121.jpg?mode=fit&width=999&height=999',
     alt: 'Море',
     description: 'Спокойное море на закате',
     detailedDescription:

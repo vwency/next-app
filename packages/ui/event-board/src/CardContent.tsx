@@ -7,6 +7,7 @@ import styles from './styles/index.module.scss'
 
 export const EventBoard: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
+  const [showDescription, setShowDescription] = useState(false)
 
   const handleItemClick = useCallback((item: CardItemProps) => {
     console.log('activated element', item)
@@ -37,18 +38,26 @@ export const EventBoard: React.FC = () => {
             onClose={handleSelectedItemClose}
             title={selectedItem.description}
           >
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.alt}
-              loading="lazy"
-              decoding="async"
-              className={styles.galleryImage}
-            />
-            {selectedItem.detailedDescription && (
-              <p className={styles.galleryDetails}>
-                {selectedItem.detailedDescription}
-              </p>
-            )}
+            <div
+              className={styles.imageWrapper}
+              onMouseEnter={() => setShowDescription(true)}
+              onMouseLeave={() => setShowDescription(false)}
+            >
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.alt}
+                loading="lazy"
+                decoding="async"
+                className={styles.galleryImage}
+              />
+              {selectedItem.detailedDescription && (
+                <div
+                  className={`${styles.detailedDescription} ${showDescription ? styles.visible : ''}`}
+                >
+                  {selectedItem.detailedDescription}
+                </div>
+              )}
+            </div>
           </DetailedModal>
         )}
       </div>
