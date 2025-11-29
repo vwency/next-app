@@ -1,0 +1,30 @@
+.cardGrid {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3vw;
+  padding: 10px;
+  z-index: 100;
+
+  @media (width <= 600px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 10px;
+  }
+}
+
+.cardGridItem {
+  outline: none;
+}
+
+.cardGridItem > div {
+  outline: none;
+}
+
+.cardGridItem:focus {
+  outline: none;
+}
+
+.cardGridItem:focus-visible {
+  outline: none;
+}

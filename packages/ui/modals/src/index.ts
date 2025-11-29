@@ -1,2 +1,2 @@
 export * from './DetailedCard/DetailedModal'
-export * from './CardsBoard/DetailedCardModalContent'
+export * from './CardsBoard/Board'

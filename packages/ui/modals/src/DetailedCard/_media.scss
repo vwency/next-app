@@ -6,7 +6,7 @@
     padding-right: 10px;
 
     img {
-      height: 40vh;
+      height: 65vh;
     }
   }
 }
@@ -17,14 +17,15 @@
     width: 70vw;
 
     img {
-      height: 50vh;
+      height: 65vh;
     }
   }
 }
 
 @media (width >= 769px) and (width <= 1024px) {
   .modalContent {
-    max-width: 50vw;
-    width: 50vw;
+    max-width: 60vw;
+    width: 60vw;
+    height: 100vh;
   }
 }
