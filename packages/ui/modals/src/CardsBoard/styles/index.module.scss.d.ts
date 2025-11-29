@@ -13,6 +13,7 @@ export interface MainPageModalModuleScss {
   detailedDescription: string
   visible: string
   expanded: string
+  contentWrapper: string
 }
 
 declare const styles: MainPageModalModuleScss

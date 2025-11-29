@@ -20,7 +20,6 @@ const DetailedCardModalContent: React.FC<ModalProps> = ({
   )
   useLockBodyScroll(isOpen)
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
-  const [showDescription, setShowDescription] = useState(false)
 
   const handleOverlayClick = useCallback(
     (e: React.MouseEvent) => {
@@ -122,25 +121,19 @@ const DetailedCardModalContent: React.FC<ModalProps> = ({
           onClose={handleSelectedItemClose}
           title={selectedItem.description}
         >
-          <div
-            className={styles.imageWrapper}
-            onMouseEnter={() => setShowDescription(true)}
-            onMouseLeave={() => setShowDescription(false)}
-          >
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.alt}
-              loading="lazy"
-              decoding="async"
-              className={styles.modalImage}
-            />
-            {selectedItem.detailedDescription && (
-              <div
-                className={`${styles.detailedDescription} ${showDescription ? styles.visible : ''}`}
-              >
-                {selectedItem.detailedDescription}
-              </div>
-            )}
+          <div className={styles.contentWrapper}>
+            <div className={styles.imageWrapper}>
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.alt}
+                loading="lazy"
+                decoding="async"
+                className={styles.modalImage}
+              />
+            </div>
+            <div className={styles.detailedDescription}>
+              {selectedItem.detailedDescription || 'Описание отсутствует'}
+            </div>
           </div>
         </DetailedModal>
       )}

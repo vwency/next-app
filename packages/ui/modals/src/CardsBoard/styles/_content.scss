@@ -1,3 +1,36 @@
+.contentWrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 70vh;
+
+  @media (width <= 768px) {
+    flex-direction: column;
+    max-height: none;
+  }
+}
+
+.imageWrapper {
+  flex: 0 0 50%;
+  max-width: 50%;
+  overflow: hidden;
+
+  @media (width <= 768px) {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
 .modalContentWrapper {
   display: flex;
   justify-content: center;

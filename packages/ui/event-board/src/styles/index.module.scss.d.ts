@@ -16,6 +16,7 @@ export interface MainPageModalModuleScss {
   galleryImage: string
   gallery: string
   galleryWrapper: string
+  contentWrapper: string
 }
 
 declare const styles: MainPageModalModuleScss

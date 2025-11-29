@@ -1,39 +1,11 @@
-.imageWrapper {
-  position: relative;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  @media (width <= 1024px) {
-  }
+.detailedDescription {
+  flex: 1;
+  padding: 1rem;
+  line-height: 1.6;
+  overflow-y: auto;
+  max-height: 70vh;
 
   @media (width <= 768px) {
+    max-height: none;
   }
-
-  @media (width <= 480px) {
-  }
-}
-
-.detailedDescription {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.7));
-  color: white;
-  padding: 2rem;
-  width: 100%;
-  transform: translateY(100%) translateZ(0);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
-.detailedDescription.visible {
-  transform: translateY(0) translateZ(0);
 }
