@@ -1,8 +1,9 @@
 .cardItemImage {
   width: 100%;
-  height: 60vh;
+  height: 75vh;
   position: relative;
   overflow: hidden;
+  display: block;
 
   img {
     width: 100%;
@@ -12,14 +13,14 @@
   }
 
   @media (width <= 1024px) {
-    height: 80vh;
+    height: 90vh;
   }
 
   @media (width <= 768px) {
-    height: 80vh;
+    height: 90vh;
   }
 
   @media (width <= 480px) {
-    height: 80vh;
+    height: 90vh;
   }
 }
