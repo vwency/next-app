@@ -9,6 +9,10 @@ export interface MainPageModalModuleScss {
   modalDetails: string
   modalOpen: string
   modalCloseState: string
+  imageWrapper: string
+  detailedDescription: string
+  visible: string
+  expanded: string
 }
 
 declare const styles: MainPageModalModuleScss
