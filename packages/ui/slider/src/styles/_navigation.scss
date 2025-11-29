@@ -1,0 +1,54 @@
+.slider {
+  &Navigation {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &NavButton {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.15);
+
+    &:hover {
+      background: rgb(255, 255, 255);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 8px 30px rgb(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    svg {
+      color: #1f2937;
+      transition: color 0.2s;
+    }
+
+    &Prev {
+      left: 24px;
+    }
+
+    &Next {
+      right: 24px;
+    }
+  }
+}

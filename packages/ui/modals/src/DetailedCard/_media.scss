@@ -1,0 +1,30 @@
+@media (width <= 500px) {
+  .modalContent {
+    max-width: 90vw;
+    width: 90vw;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    img {
+      height: 40vh;
+    }
+  }
+}
+
+@media (width >= 501px) and (width <= 768px) {
+  .modalContent {
+    max-width: 70vw;
+    width: 70vw;
+
+    img {
+      height: 50vh;
+    }
+  }
+}
+
+@media (width >= 769px) and (width <= 1024px) {
+  .modalContent {
+    max-width: 50vw;
+    width: 50vw;
+  }
+}

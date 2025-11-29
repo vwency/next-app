@@ -5,7 +5,7 @@ import { CardGrid } from '@ui/advertisements'
 import { galleryItems } from './Items'
 import { DetailedModal } from '../index'
 import { CardItemProps, GalleryItem, ModalProps } from '@shared/interfaces'
-import styles from './styles/card/index.module.scss'
+import styles from './styles/index.module.scss'
 
 const CLOSE_ICON_SIZE = 20
 const MODAL_CLOSE_TIMEOUT = 300

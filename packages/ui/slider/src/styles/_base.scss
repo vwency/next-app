@@ -1,0 +1,34 @@
+.slider {
+  position: relative;
+  width: 90vw;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0, 0, 0, 0.25);
+
+  &Viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  &Container {
+    display: flex;
+    height: 100%;
+  }
+
+  &Slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    position: relative;
+  }
+
+  &Image {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    .sliderSlide:hover & {
+      transform: scale(1.02);
+    }
+  }
+}

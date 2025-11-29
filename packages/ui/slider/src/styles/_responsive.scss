@@ -1,0 +1,41 @@
+@media (width <= 768px) {
+  .slider {
+    height: 55vh;
+
+    &NavButton {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &Prev {
+        left: 16px;
+      }
+
+      &Next {
+        right: 16px;
+      }
+    }
+  }
+
+  .sliderCornerNav .sliderNavButton {
+    bottom: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .sliderNavButton {
+    background: rgb(31, 41, 55, 0.9);
+
+    &:hover {
+      background: rgb(31, 41, 55, 1);
+    }
+
+    svg {
+      color: white;
+    }
+  }
+}
