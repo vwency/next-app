@@ -5,6 +5,7 @@
   gap: 3vw;
   padding: 10px;
   z-index: 100;
+  transform: translateZ(0);
 
   @media (width <= 600px) {
     grid-template-columns: 1fr;
@@ -15,6 +16,8 @@
 
 .cardGridItem {
   outline: none;
+  transform: translateZ(0);
+  transform: translateZ(0);
 
   > div {
     outline: none;

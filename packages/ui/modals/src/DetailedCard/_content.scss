@@ -11,6 +11,9 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   color: #fff;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
 
   img {
     margin-top: 2%;
