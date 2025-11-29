@@ -7,17 +7,10 @@
   overflow: hidden;
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease,
-    height 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: flex-start;
+    box-shadow 0.3s ease;
   outline: none;
-  transform-origin: top center;
 
   &:hover {
-    transform: scale(1);
     box-shadow: 0 8px 40px rgb(0, 0, 0, 0.2);
   }
 
@@ -25,12 +18,4 @@
     outline: none;
     box-shadow: none;
   }
-}
-
-.cardItemDescription {
-  flex-shrink: 0;
-}
-
-.cardItemDetailed {
-  flex-shrink: 0;
 }

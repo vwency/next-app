@@ -15,16 +15,16 @@
 
 .cardGridItem {
   outline: none;
-}
 
-.cardGridItem > div {
-  outline: none;
-}
+  > div {
+    outline: none;
+  }
 
-.cardGridItem:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-.cardGridItem:focus-visible {
-  outline: none;
+  &:focus-visible {
+    outline: none;
+  }
 }

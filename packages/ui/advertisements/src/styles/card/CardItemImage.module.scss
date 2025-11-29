@@ -1,9 +1,8 @@
 .cardItemImage {
-  flex-shrink: 0;
   width: 100%;
-  overflow: hidden;
-  min-height: 0;
   height: 60vh;
+  position: relative;
+  overflow: hidden;
 
   img {
     width: 100%;

@@ -9,15 +9,9 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
   ({ image, alt = '', description, detailedDescription = '' }) => {
     const descriptionRef = useRef<HTMLDivElement>(null)
     const imageRef = useRef<HTMLDivElement>(null)
+    const detailedRef = useRef<HTMLDivElement>(null)
 
-    const {
-      isHovered,
-      setIsHovered,
-      detailedRef,
-      calculateBaseHeight,
-      calculateExpandedHeight,
-    } = useCardItemHover({ detailedDescription, imageRef })
-
+    const [isHovered, setIsHovered] = useState(false)
     const [supportsHover, setSupportsHover] = useState(false)
 
     useEffect(() => {
@@ -26,74 +20,46 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
       }
     }, [])
 
-    const heights = useMemo(() => {
-      const base = calculateBaseHeight()
-      const expanded = detailedDescription ? calculateExpandedHeight() : base
-      return { base, expanded }
-    }, [calculateBaseHeight, calculateExpandedHeight, detailedDescription])
-
     const handleMouseEnter = useCallback(() => {
       if (detailedDescription && supportsHover) setIsHovered(true)
-    }, [detailedDescription, setIsHovered, supportsHover])
+    }, [detailedDescription, supportsHover])
 
     const handleMouseLeave = useCallback(() => {
       if (supportsHover) setIsHovered(false)
-    }, [setIsHovered, supportsHover])
+    }, [supportsHover])
 
     const detailedStyles = useMemo(
       () => ({
-        height: isHovered ? 'auto' : 0,
         opacity: isHovered ? 1 : 0,
-        overflow: isHovered ? 'visible' : 'hidden',
-        padding: isHovered ? '0.5rem 10px' : '0 10px',
+        transform: isHovered ? 'translateY(0)' : 'translateY(100%)',
         transition: supportsHover
-          ? 'opacity 0.2s ease, padding 0.2s ease'
+          ? 'opacity 0.3s ease, transform 0.3s ease'
           : 'none',
       }),
       [isHovered, supportsHover]
     )
 
-    const cardStyles = useMemo(() => {
-      const shouldExpand = isHovered && detailedDescription && supportsHover
-      return {
-        '--base-height': `${heights.base}px`,
-        '--expanded-height': `${heights.expanded}px`,
-        height: shouldExpand ? `var(--expanded-height)` : `var(--base-height)`,
-        transition: supportsHover ? 'height 0.2s ease' : 'none',
-        willChange: shouldExpand ? 'height' : 'auto',
-      } as React.CSSProperties
-    }, [heights, isHovered, detailedDescription, supportsHover])
-
-    const cardClassName = useMemo(
-      () =>
-        `${styles.cardItem} ${
-          !detailedDescription ? styles.noDescription : ''
-        }`,
-      [detailedDescription]
-    )
-
     return (
       <div
-        className={cardClassName}
+        className={styles.cardItem}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={cardStyles}
       >
         <div className={styles.cardItemImage} ref={imageRef}>
           <img src={image} alt={alt} loading="lazy" decoding="async" />
-        </div>
-        <div ref={descriptionRef} className={styles.cardItemDescription}>
-          {description}
-        </div>
-        {detailedDescription && (
-          <div
-            ref={detailedRef}
-            className={styles.cardItemDetailed}
-            style={detailedStyles}
-          >
-            {detailedDescription}
+          <div ref={descriptionRef} className={styles.cardItemDescription}>
+            {description}
           </div>
-        )}
+          {detailedDescription && (
+            <div
+              ref={detailedRef}
+              className={styles.cardItemDetailed}
+              style={detailedStyles}
+            >
+              {detailedDescription}
+            </div>
+          )}
+        </div>
       </div>
     )
   },
