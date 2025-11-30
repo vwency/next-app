@@ -2,7 +2,6 @@
   .modalContent {
     min-width: 100vw;
     width: 100vw;
-    padding-right: 0;
     padding-left: 10px;
 
     img {
@@ -14,7 +13,6 @@
 @media (width >= 501px) and (width <= 768px) {
   .modalContent {
     min-width: 100vw;
-    padding-right: 0;
     width: 100vw;
     padding-left: 10px;
 
@@ -28,7 +26,6 @@
   .modalContent {
     min-width: 100vw;
     padding-left: 10px;
-    padding-right: 0;
     width: 100vw;
     height: 100vh;
   }

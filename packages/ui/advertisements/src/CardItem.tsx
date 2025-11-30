@@ -2,10 +2,16 @@
 
 import React, { useRef, useMemo, useCallback, useState, useEffect } from 'react'
 import styles from './styles/card/index.module.scss'
-import { CardItemProps } from '@shared/interfaces'
+import { CardItemProps, SessionType, SessionFormat } from '@shared/interfaces'
 
 export const CardItem: React.FC<CardItemProps> = React.memo(
-  ({ image, alt = '', description, detailedDescription = '' }) => {
+  ({
+    image,
+    alt = '',
+    description,
+    detailedDescription = '',
+    sessions = [],
+  }) => {
     const descriptionRef = useRef<HTMLDivElement>(null)
     const imageRef = useRef<HTMLDivElement>(null)
     const detailedRef = useRef<HTMLDivElement>(null)
@@ -42,14 +48,55 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
       [isHovered, supportsHover]
     )
 
+    const formatTimestamp = (timestamp: number) => {
+      const date = new Date(timestamp * 1000)
+      return date.toLocaleTimeString('ru-RU', {
+        hour: '2-digit',
+        minute: '2-digit',
+      })
+    }
+
+    const formatSessionType = (type: SessionType) => {
+      return type === SessionType.VIP ? 'VIP' : 'Стандарт'
+    }
+
     if (isMobile) {
       return (
         <div className={styles.cardItem}>
           <div className={styles.cardItemImage} ref={imageRef}>
             <img src={image} alt={alt} loading="lazy" decoding="async" />
           </div>
-          <div ref={descriptionRef} className={styles.cardItemDescription}>
-            {description}
+          <div className={styles.cardItemContent}>
+            <div ref={descriptionRef} className={styles.cardItemDescription}>
+              {description}
+            </div>
+            {sessions.length > 0 && (
+              <div className={styles.cardItemSessions}>
+                <div className={styles.sessionsTitle}>Сеансы:</div>
+                <div className={styles.sessionsList}>
+                  {sessions.map((session, index) => (
+                    <div key={index} className={styles.sessionItem}>
+                      <span className={styles.sessionTime}>
+                        {formatTimestamp(session.timestamp)}
+                      </span>
+                      <span className={styles.sessionType}>
+                        {formatSessionType(session.type)}
+                      </span>
+                      {session.format && (
+                        <span className={styles.sessionFormat}>
+                          {session.format}
+                        </span>
+                      )}
+                      {session.price && (
+                        <span className={styles.sessionPrice}>
+                          {session.price} ₽
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )
@@ -83,7 +130,8 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
     prev.image === next.image &&
     prev.alt === next.alt &&
     prev.description === next.description &&
-    prev.detailedDescription === next.detailedDescription
+    prev.detailedDescription === next.detailedDescription &&
+    JSON.stringify(prev.sessions) === JSON.stringify(next.sessions)
 )
 
 export default CardItem

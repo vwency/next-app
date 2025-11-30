@@ -24,3 +24,63 @@
     box-shadow: none;
   }
 }
+
+.cardItemContent {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  padding: 1rem;
+  background: rgb(0, 0, 0, 0.85);
+  backdrop-filter: blur(15px);
+}
+
+.cardItemSessions {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.sessionsTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.sessionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sessionItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgb(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.sessionTime {
+  color: rgb(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.sessionType {
+  color: rgb(255, 255, 255, 0.7);
+  padding: 0.1rem 0.4rem;
+  background: rgb(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.sessionFormat {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.sessionPrice {
+  color: rgb(100, 200, 255, 0.9);
+  margin-left: auto;
+  font-weight: 600;
+}

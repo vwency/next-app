@@ -25,6 +25,18 @@ export interface MainPageModalModuleScss {
   miniatureItem: string
   miniatureImage: string
   miniatureDescription: string
+  infoGrid: string
+  infoItem: string
+  infoLabel: string
+  infoValue: string
+  sessionsSection: string
+  sessionsTitle: string
+  sessionTimes: string
+  sessionTime: string
+  sessionTimeTop: string
+  sessionTimeBottom: string
+  sessionFormat: string
+  sessionPrice: string
 }
 
 declare const styles: MainPageModalModuleScss
