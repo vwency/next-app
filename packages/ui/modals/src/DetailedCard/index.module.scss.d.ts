@@ -3,5 +3,6 @@ declare const styles: {
   modalContent: string
   modalBody: string
   closeButton: string
+  modalHeader: string
 }
 export default styles

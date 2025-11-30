@@ -35,3 +35,18 @@
     height: 24px;
   }
 }
+
+.modalHeader {
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.closeButton {
+  flex-shrink: 0;
+}
