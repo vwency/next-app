@@ -9,7 +9,6 @@ export const EventBoard: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
 
   const handleItemClick = useCallback((item: CardItemProps) => {
-    console.log('activated element', item)
     requestAnimationFrame(() => {
       setSelectedItem({
         ...item,
@@ -19,6 +18,15 @@ export const EventBoard: React.FC = () => {
   }, [])
 
   const handleSelectedItemClose = useCallback(() => setSelectedItem(null), [])
+
+  const handleBuyTicket = useCallback(() => {}, [selectedItem])
+
+  const otherItems = galleryItems
+    .filter((item) => item !== selectedItem)
+    .map((item) => ({
+      ...item,
+      alt: item.alt || item.description,
+    }))
 
   return (
     <div className={styles.galleryWrapper}>
@@ -47,8 +55,40 @@ export const EventBoard: React.FC = () => {
                   className={styles.galleryImage}
                 />
               </div>
-              <div className={styles.detailedDescription}>
-                {selectedItem.detailedDescription || 'Описание отсутствует'}
+              <div className={styles.detailsSection}>
+                <div className={styles.detailedDescription}>
+                  {selectedItem.detailedDescription || 'Описание отсутствует'}
+                </div>
+                <button
+                  type="button"
+                  onClick={handleBuyTicket}
+                  className={styles.buyButton}
+                >
+                  Купить билет
+                </button>
+              </div>
+            </div>
+
+            <div className={styles.relatedEvents}>
+              <h3>Другие события</h3>
+              <div className={styles.miniatureGrid}>
+                {otherItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className={styles.miniatureItem}
+                    onClick={() => handleItemClick(item)}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      loading="lazy"
+                      className={styles.miniatureImage}
+                    />
+                    <p className={styles.miniatureDescription}>
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </DetailedModal>

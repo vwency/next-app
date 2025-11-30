@@ -17,6 +17,14 @@ export interface MainPageModalModuleScss {
   gallery: string
   galleryWrapper: string
   contentWrapper: string
+  detailsSection: string
+  buyButton: string
+  relatedEvents: string
+  miniatureList: string
+  miniatureGrid: string
+  miniatureItem: string
+  miniatureImage: string
+  miniatureDescription: string
 }
 
 declare const styles: MainPageModalModuleScss

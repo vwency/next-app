@@ -3,6 +3,7 @@
   gap: 2rem;
   align-items: flex-start;
   width: 100%;
+  margin-top: 4vh;
   max-height: 70vh;
 
   @media (width <= 768px) {
@@ -24,16 +25,9 @@
   width: 100%;
 }
 
-.galleryImage {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
 .imageWrapper {
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 20%;
   overflow: hidden;
 
   @media (width <= 768px) {

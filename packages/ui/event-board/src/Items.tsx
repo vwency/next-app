@@ -3,7 +3,7 @@ import { GalleryItem } from '@shared/interfaces'
 export const galleryItems: GalleryItem[] = [
   {
     image:
-      'https://images.unsplash.com/photo-1747697006653-569b3f418cf9?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://s2ru1.kinoplan24.ru/938/0406060507289e25bf701fc6/24046.jpg?mode=fit&width=999&height=999',
     alt: 'Природа',
     description: 'Красивый пейзаж с горами и лесом',
     detailedDescription:
@@ -11,7 +11,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0',
+      'https://s1ru1.kinoplan24.ru/863/04060605071ad2b1f4a0cf55/10065222.jpg?mode=fit&width=999&height=999',
     alt: 'Море',
     description: 'Спокойное море на закате',
     detailedDescription:
@@ -19,7 +19,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0',
+      'https://s2ru1.kinoplan24.ru/985/04060605071ab251ee52f8db/22709.jpg?mode=fit&width=999&height=999',
     alt: 'Город',
     description: 'Вечерний городской пейзаж с огнями',
     detailedDescription:
@@ -27,10 +27,18 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0',
+      'https://s1ru1.kinoplan24.ru/443/04060605072c4798225af9e7/10067948.jpg?mode=fit&width=999&height=999',
     alt: 'Цветы',
     description: 'Яркие цветы в солнечном саду',
     detailedDescription:
       'Солнечные лучи освещают яркие лепестки цветов, создавая живописную и радостную атмосферу. Идеально подходит для вдохновения и спокойного настроения.',
+  },
+  {
+    image:
+      'https://s2ru1.kinoplan24.ru/969/0406060507207c681b0473bf/10066171.jpg?mode=fit&width=999&height=999',
+    alt: 'Природа',
+    description: 'Трансформеры: Эпоха истребления',
+    detailedDescription:
+      'На этом фото изображены величественные горы, покрытые густым лесом. Идеальное место для прогулок и отдыха на природе, где можно насладиться чистым воздухом и тишиной.',
   },
 ]
