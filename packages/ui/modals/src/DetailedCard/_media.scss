@@ -1,9 +1,9 @@
 @media (width <= 500px) {
   .modalContent {
-    max-width: 90vw;
-    width: 90vw;
+    min-width: 100vw;
+    width: 100vw;
+    padding-right: 0;
     padding-left: 10px;
-    padding-right: 10px;
 
     img {
       height: 65vh;
@@ -13,8 +13,10 @@
 
 @media (width >= 501px) and (width <= 768px) {
   .modalContent {
-    max-width: 70vw;
-    width: 70vw;
+    min-width: 100vw;
+    padding-right: 0;
+    width: 100vw;
+    padding-left: 10px;
 
     img {
       height: 65vh;
@@ -24,8 +26,10 @@
 
 @media (width >= 769px) and (width <= 1024px) {
   .modalContent {
-    max-width: 60vw;
-    width: 60vw;
+    min-width: 100vw;
+    padding-left: 10px;
+    padding-right: 0;
+    width: 100vw;
     height: 100vh;
   }
 }

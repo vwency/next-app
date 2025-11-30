@@ -1,0 +1,41 @@
+@media (width <= 480px) {
+  .cardItemImage {
+    height: 90vh !important;
+  }
+}
+
+@media (width <= 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 10px;
+  }
+
+  .cardItemImage {
+    height: 90vh !important;
+  }
+}
+
+@media (width <= 1024px) {
+  .cardItemImage {
+    height: 90vh !important;
+  }
+}
+
+@supports (-webkit-appearance: none) {
+  @media (width <= 768px) and (pointer: coarse) {
+    .cardGrid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .cardGridItem {
+      width: 100%;
+    }
+
+    .cardItemImage {
+      height: 70vh !important;
+    }
+  }
+}

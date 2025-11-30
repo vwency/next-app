@@ -1,0 +1,16 @@
+@media (width <= 768px) {
+  .detailedDescription {
+    max-height: none;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    max-height: none;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    flex: 1;
+    max-width: 100%;
+  }
+}
