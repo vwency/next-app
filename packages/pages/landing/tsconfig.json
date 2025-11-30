@@ -5,9 +5,16 @@
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": false,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["src"]
+  "include": ["src", "next-env.d.ts"],
+  "exclude": ["node_modules", "dist", ".next"]
 }

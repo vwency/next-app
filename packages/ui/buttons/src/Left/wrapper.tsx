@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { LeftButtonMain } from './Button'
 
-export const MainLeftButton = () => (
+interface MainLeftButtonProps {
+  onClick?: () => void
+}
+
+export const MainLeftButton: FC<MainLeftButtonProps> = ({ onClick }) => (
   <div>
-    <LeftButtonMain />
+    <LeftButtonMain onClick={onClick} />
   </div>
 )
 

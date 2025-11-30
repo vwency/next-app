@@ -1,4 +1,7 @@
+'use client'
+
 import { useMemo } from 'react'
+import { useRouter } from 'next/navigation'
 import { MainTextHead } from '@ui/text-header'
 import { MainText } from '@ui/text-main'
 import { MainSlider } from '@ui/slider'
@@ -8,6 +11,8 @@ import { Footer } from '@ui/footer'
 import styles from './styles/index.module.scss'
 
 export const LandingPage = () => {
+  const router = useRouter()
+
   const content = useMemo(
     () => (
       <>
@@ -15,7 +20,7 @@ export const LandingPage = () => {
         <MainText />
         <MainFooterText />
         <MainSlider />
-        <MainButtons />
+        <MainButtons onClickLeft={() => router.push('/afisha')} />
         <Footer />
       </>
     ),
