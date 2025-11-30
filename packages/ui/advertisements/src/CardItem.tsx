@@ -2,7 +2,6 @@
 
 import React, { useRef, useMemo, useCallback, useState, useEffect } from 'react'
 import styles from './styles/card/index.module.scss'
-import { useCardItemHover } from '@ui/hooks'
 import { CardItemProps } from '@shared/interfaces'
 
 export const CardItem: React.FC<CardItemProps> = React.memo(
@@ -13,10 +12,14 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
 
     const [isHovered, setIsHovered] = useState(false)
     const [supportsHover, setSupportsHover] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
       if (typeof window !== 'undefined' && window.matchMedia) {
         setSupportsHover(window.matchMedia('(hover: hover)').matches)
+        setIsMobile(
+          window.matchMedia('(max-width: 768px) and (pointer: coarse)').matches
+        )
       }
     }, [])
 
@@ -38,6 +41,19 @@ export const CardItem: React.FC<CardItemProps> = React.memo(
       }),
       [isHovered, supportsHover]
     )
+
+    if (isMobile) {
+      return (
+        <div className={styles.cardItem}>
+          <div className={styles.cardItemImage} ref={imageRef}>
+            <img src={image} alt={alt} loading="lazy" decoding="async" />
+          </div>
+          <div ref={descriptionRef} className={styles.cardItemDescription}>
+            {description}
+          </div>
+        </div>
+      )
+    }
 
     return (
       <div
