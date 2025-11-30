@@ -31,4 +31,5 @@ export interface CardItemProps {
   ageRating?: string
   eventTimes?: string[]
   premiere?: string
+  trailerUrl?: string
 }

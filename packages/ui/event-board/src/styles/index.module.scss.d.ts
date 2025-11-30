@@ -37,6 +37,12 @@ export interface MainPageModalModuleScss {
   sessionTimeBottom: string
   sessionFormat: string
   sessionPrice: string
+  trailerButton: string
+  trailerIcon: string
+  trailerSection: string
+  trailerTitle: string
+  trailerWrapper: string
+  trailerIframe: string
 }
 
 declare const styles: MainPageModalModuleScss

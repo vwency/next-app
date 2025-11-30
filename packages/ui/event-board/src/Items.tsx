@@ -33,6 +33,7 @@ export const Items: CardItemProps[] = [
         price: 500,
       },
     ],
+    trailerUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
     image:

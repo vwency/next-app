@@ -89,6 +89,22 @@ export const EventBoard: React.FC = () => {
                   </div>
                 </div>
 
+                {selectedItem.trailerUrl && (
+                  <div className={styles.trailerSection}>
+                    <h4 className={styles.trailerTitle}>Трейлер</h4>
+                    <div className={styles.trailerWrapper}>
+                      <iframe
+                        src={selectedItem.trailerUrl}
+                        title="Трейлер"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className={styles.trailerIframe}
+                      />
+                    </div>
+                  </div>
+                )}
+
                 <div className={styles.infoGrid}>
                   <div className={styles.infoItem}>
                     <span className={styles.infoLabel}>Жанр:</span>

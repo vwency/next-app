@@ -14,4 +14,13 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .relatedEvents {
+    max-height: none;
+  }
+
+  .miniatureGrid {
+    max-height: none;
+    overflow-y: visible;
+  }
 }
