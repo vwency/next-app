@@ -15,7 +15,12 @@
     "typescriptreact"
   ],
   "stylelint.configFile": "utils/linters/.stylelintrc.json",
-  "stylelint.validate": ["css", "scss", "less", "postcss"],
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less",
+    "postcss"
+  ],
   "prettier.configPath": "utils/linters/.prettierrc.yaml",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
