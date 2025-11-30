@@ -1,19 +1,19 @@
 import React, { useState, useCallback } from 'react'
 import { CardGrid } from '@ui/advertisements'
-import { galleryItems } from './Items'
+import { Items } from './Items'
 import { DetailedModal } from '@ui/modals'
-import { CardItemProps, GalleryItem } from '@shared/interfaces'
+import { CardItemProps } from '@shared/interfaces'
 import styles from './styles/index.module.scss'
 
 export const EventBoard: React.FC = () => {
-  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null)
+  const [selectedItem, setSelectedItem] = useState<CardItemProps | null>(null)
 
   const handleItemClick = useCallback((item: CardItemProps) => {
     requestAnimationFrame(() => {
       setSelectedItem({
         ...item,
         alt: item.alt || item.description,
-      } as GalleryItem)
+      } as CardItemProps)
     })
   }, [])
 
@@ -21,18 +21,18 @@ export const EventBoard: React.FC = () => {
 
   const handleBuyTicket = useCallback(() => {}, [selectedItem])
 
-  const otherItems = galleryItems
-    .filter((item) => item !== selectedItem)
-    .map((item) => ({
+  const otherItems = Items.filter((item) => item !== selectedItem).map(
+    (item) => ({
       ...item,
       alt: item.alt || item.description,
-    }))
+    })
+  )
 
   return (
     <div className={styles.galleryWrapper}>
       <div className={styles.gallery}>
         <CardGrid
-          items={galleryItems.map((item) => ({
+          items={Items.map((item) => ({
             ...item,
             alt: item.alt || item.description,
           }))}

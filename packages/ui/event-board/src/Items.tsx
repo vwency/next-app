@@ -1,6 +1,6 @@
-import { GalleryItem } from '@shared/interfaces'
+import { CardItemProps } from '@shared/interfaces'
 
-export const galleryItems: GalleryItem[] = [
+export const Items: CardItemProps[] = [
   {
     image:
       'https://s2ru1.kinoplan24.ru/938/0406060507289e25bf701fc6/24046.jpg?mode=fit&width=999&height=999',
