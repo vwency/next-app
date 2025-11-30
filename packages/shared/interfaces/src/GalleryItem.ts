@@ -11,4 +11,5 @@ export interface GalleryItem {
   releaseYear?: number
   ageRating?: string
   eventTimes?: string[]
+  premiere?: string
 }

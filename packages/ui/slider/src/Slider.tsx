@@ -3,7 +3,7 @@ import React, { memo, useMemo } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import SlideImage from './SlideImage'
 import { useAutoEmblaCarousel } from '@ui/hooks'
-import { SLIDER_IMAGES } from '@shared/consts'
+import { galleryItems } from './Items'
 import styles from './styles/index.module.scss'
 
 export const Slider = () => {
@@ -11,8 +11,14 @@ export const Slider = () => {
 
   const slides = useMemo(
     () =>
-      SLIDER_IMAGES.map((src, i) => (
-        <SlideImage key={i} src={src} index={i} priority={i === 0} />
+      galleryItems.map((item, i) => (
+        <SlideImage
+          key={i}
+          src={item.image}
+          alt={item.alt}
+          index={i}
+          priority={i === 0}
+        />
       )),
     []
   )
