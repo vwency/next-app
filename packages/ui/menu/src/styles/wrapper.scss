@@ -1,4 +1,4 @@
-.header_wrapper {
+.headerWrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,15 +12,25 @@
 }
 
 @media (width <= 480px) {
-  .header_wrapper {
+  .headerWrapper {
     padding-top: 7px;
     padding-bottom: 7px;
   }
 }
 
 @media (width <= 768px) {
-  .header_wrapper {
+  .headerWrapper {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+}
+
+.menuWrapper {
+  margin: 0.6vh auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  position: relative;
+  box-sizing: border-box;
 }

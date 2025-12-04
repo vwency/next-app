@@ -17,4 +17,17 @@
   text-align: center;
   background: rgb(0, 0, 0, 0.85);
   z-index: 2;
+  font-size: 1rem;
+}
+
+@media (width <= 1920px) {
+  .cardItemDescription {
+    font-size: 0.85rem;
+  }
+}
+
+@media (width <= 1600px) {
+  .cardItemDescription {
+    font-size: 0.8rem;
+  }
 }

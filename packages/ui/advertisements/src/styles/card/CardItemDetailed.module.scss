@@ -16,3 +16,15 @@
   hyphens: auto;
   line-height: 1.4;
 }
+
+@media (width <= 1920px) {
+  .cardItemDetailed {
+    font-size: 0.8rem;
+  }
+}
+
+@media (width <= 1600px) {
+  .cardItemDetailed {
+    font-size: 0.75rem;
+  }
+}

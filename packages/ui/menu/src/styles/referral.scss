@@ -1,4 +1,4 @@
-.menu__refferal {
+.menuRefferal {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.list__inline__refferal {
+.listInlineRefferal {
   list-style: none;
   gap: 0.5vw;
   padding: 0;
@@ -21,13 +21,13 @@
 }
 
 @media (width <= 768px) {
-  .menu__refferal {
+  .menuRefferal {
     display: none;
   }
 }
 
 @media (width <= 576px) {
-  .menu__refferal {
+  .menuRefferal {
     display: none;
   }
 }

@@ -1,4 +1,4 @@
-.menu__logo {
+.menuLogo {
   text-align: center;
   box-sizing: border-box;
   flex-direction: column;
@@ -6,7 +6,7 @@
   justify-items: center;
   display: flex;
 
-  &__text {
+  &Text {
     color: #fff;
     font-family: Chillax;
     font-size: 1.5rem;
