@@ -11,23 +11,14 @@ export const DetailedModal: React.FC<ModalProps> = ({
   children,
   portalRootId,
 }) => {
-  const modalRef = useRef<HTMLDivElement | null>(null)
+  const modalRef = useRef<HTMLDivElement>(null)
   const { handleOverlayClick } = useModalClose({ isOpen, onClose })
 
   useEffect(() => {
     if (isOpen) {
-      const scrollY = window.scrollY
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${scrollY}px`
-      document.body.style.width = '100%'
       document.body.style.overflow = 'hidden'
-
       return () => {
-        document.body.style.position = ''
-        document.body.style.top = ''
-        document.body.style.width = ''
         document.body.style.overflow = ''
-        window.scrollTo(0, scrollY)
       }
     }
   }, [isOpen])
@@ -44,53 +35,30 @@ export const DetailedModal: React.FC<ModalProps> = ({
   }
 
   return createPortal(
-    <div
-      ref={modalRef}
-      className={styles.modalOverlay}
-      onClick={handleClick}
-      role="dialog"
-      aria-modal="true"
-      aria-label={title ?? 'modal'}
-      tabIndex={-1}
-    >
+    <div className={styles.modalOverlay} onClick={handleClick}>
       <div
         className={styles.modalContent}
-        role="document"
-        aria-labelledby={title ? 'modal-title' : undefined}
         onClick={(e) => e.stopPropagation()}
+        ref={modalRef}
       >
         <div className={styles.modalHeader}>
-          {title && (
-            <header>
-              <h2 id="modal-title">{title}</h2>
-            </header>
-          )}
+          {title && <h2>{title}</h2>}
           <button
-            type="button"
-            onClick={onClose}
             className={styles.closeButton}
+            onClick={onClose}
             aria-label="Close modal"
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path
-                d="M18 6L6 18M6 6L18 18"
-                stroke="currentColor"
-                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
         </div>
-        <div className={styles.modalBody}>
-          <div>{children}</div>
-        </div>
+        <div className={styles.modalBody}>{children}</div>
       </div>
     </div>,
     portalRoot
