@@ -1,13 +1,13 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import MainMenu from '../MainMenu/MainMenu'
+import MainMenu from '../menu/desktop'
 import styles from '../styles/index.module.scss'
 import { HeaderLayoutProps } from '@shared/interfaces'
 import { MAX_SCROLL_HIDE, SCROLL_SHOW_THRESHOLD } from '@shared/consts'
 import { useMainMenu } from '@ui/hooks'
 
-const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
+const DesktopMenuLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
   const [translateY, setTranslateY] = useState(0)
   const lastScrollY = useRef(0)
   const accumulatedUpScroll = useRef(0)
@@ -52,7 +52,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
 
   return (
     <div
-      className={`${styles.headerWrapper}`}
+      className={`${styles.DesktopMenuWrapper}`}
       style={{
         transform: `translateY(-${translatePercent}%)`,
         transition: 'transform 0.1s linear',
@@ -68,4 +68,4 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
   )
 }
 
-export default React.memo(HeaderLayout)
+export default React.memo(DesktopMenuLayout)

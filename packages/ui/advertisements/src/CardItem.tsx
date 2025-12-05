@@ -2,7 +2,7 @@
 
 import React, { useRef, useMemo, useCallback, useState, useEffect } from 'react'
 import styles from './styles/card/index.module.scss'
-import { CardItemProps, SessionType, SessionFormat } from '@shared/interfaces'
+import { CardItemProps, SessionType } from '@shared/interfaces'
 
 export const CardItem: React.FC<CardItemProps> = React.memo(
   ({

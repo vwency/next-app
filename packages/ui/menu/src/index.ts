@@ -1,2 +1,2 @@
-export * from './HeaderLayout'
-export * from './MainMenu'
+export * from './layout'
+export * from './menu'

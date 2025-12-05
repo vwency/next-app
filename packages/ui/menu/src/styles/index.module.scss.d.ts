@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly menuWrapper: string
+  readonly menuWrapperContent: string
   readonly menuLogo: string
   readonly menuLogoText: string
   readonly menuOptions: string
@@ -13,6 +13,6 @@ declare const styles: {
   readonly menuRefferal: string
   readonly listInlineRefferal: string
   readonly listInlineRefferalItem: string
-  readonly headerWrapper: string
+  readonly DesktopMenuWrapper: string
 }
 export default styles

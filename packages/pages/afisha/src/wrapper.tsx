@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { HeaderLayout } from '@ui/menu'
+import { DesktopMenuLayout } from '@ui/menu'
 import { StarsBackground } from '@ui/stars-background'
 import { EventBoardPage } from './page'
 import styles from './styles/index.module.scss'
@@ -12,7 +12,7 @@ export const AfishaPageWrapper = () => {
   return (
     <div className={styles.container}>
       <StarsBackground />
-      <HeaderLayout contentRef={mainContentRef} />
+      <DesktopMenuLayout contentRef={mainContentRef} />
       <div ref={mainContentRef}>
         <EventBoardPage />
       </div>

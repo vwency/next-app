@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { LandingPage } from './page'
-import { HeaderLayout } from '@ui/menu'
+import { DesktopMenuLayout } from '@ui/menu'
 import { StarsBackground } from '@ui/stars-background'
 import styles from './styles/index.module.scss'
 
@@ -12,7 +12,7 @@ export const LandingPageWrapper = () => {
   return (
     <div className={styles.container}>
       <StarsBackground />
-      <HeaderLayout contentRef={mainContentRef} />
+      <DesktopMenuLayout contentRef={mainContentRef} />
       <div ref={mainContentRef}>
         <LandingPage />
       </div>

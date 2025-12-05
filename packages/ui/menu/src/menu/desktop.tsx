@@ -8,7 +8,7 @@ import { MainMenuProps } from '@shared/interfaces'
 const MainMenu = forwardRef<HTMLDivElement, MainMenuProps>(
   ({ contentRef, isOpen, toggleMenu }, ref) => {
     return (
-      <div className={styles.menuWrapper} ref={ref}>
+      <div className={styles.menuWrapperContent} ref={ref}>
         <div className={styles.menuLogo}>
           <div className={styles.menuLogoText}>КиноАфиша</div>
         </div>
