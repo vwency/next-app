@@ -18,6 +18,7 @@ export const DetailedModal: React.FC<ModalProps> = ({
     if (isOpen) {
       document.body.style.overflow = 'hidden'
       document.documentElement.style.overflow = 'hidden'
+      modalRef.current?.focus({ preventScroll: true })
       return () => {
         document.body.style.overflow = ''
         document.documentElement.style.overflow = ''
@@ -32,7 +33,6 @@ export const DetailedModal: React.FC<ModalProps> = ({
     : document.body
 
   const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation()
     handleOverlayClick(e)
   }
 
@@ -40,6 +40,7 @@ export const DetailedModal: React.FC<ModalProps> = ({
     <div className={styles.modalOverlay} onClick={handleClick}>
       <div
         className={styles.modalContent}
+        tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
