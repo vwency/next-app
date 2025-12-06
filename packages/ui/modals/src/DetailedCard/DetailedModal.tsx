@@ -17,8 +17,10 @@ export const DetailedModal: React.FC<ModalProps> = ({
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
       return () => {
         document.body.style.overflow = ''
+        document.documentElement.style.overflow = ''
       }
     }
   }, [isOpen])
