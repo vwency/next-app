@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import MainMenu from '../menu/desktop'
-import styles from '../styles/index.module.scss'
+import MobileMenu from '../menu/mobile'
+import styles from '../styles/desktop/index.module.scss'
 import { HeaderLayoutProps } from '@shared/interfaces'
 import { MAX_SCROLL_HIDE, SCROLL_SHOW_THRESHOLD } from '@shared/consts'
 import { useMainMenu } from '@ui/hooks'
@@ -51,20 +52,23 @@ const DesktopMenuLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
   const translatePercent = (translateY / MAX_SCROLL_HIDE) * 100
 
   return (
-    <div
-      className={`${styles.DesktopMenuWrapper}`}
-      style={{
-        transform: `translateY(-${translatePercent}%)`,
-        transition: 'transform 0.1s linear',
-      }}
-    >
-      <MainMenu
-        ref={menuRef}
-        contentRef={contentRef}
-        isOpen={isOpen}
-        toggleMenu={toggleMenu}
-      />
-    </div>
+    <>
+      <div
+        className={`${styles.DesktopMenuWrapper}`}
+        style={{
+          transform: `translateY(-${translatePercent}%)`,
+          transition: 'transform 0.1s linear',
+        }}
+      >
+        <MainMenu
+          ref={menuRef}
+          contentRef={contentRef}
+          isOpen={isOpen}
+          toggleMenu={toggleMenu}
+        />
+      </div>
+      <MobileMenu isOpen={isOpen} />
+    </>
   )
 }
 

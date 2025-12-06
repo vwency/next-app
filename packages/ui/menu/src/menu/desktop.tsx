@@ -2,7 +2,7 @@
 
 import React, { forwardRef } from 'react'
 import Link from 'next/link'
-import styles from '../styles/index.module.scss'
+import styles from '../styles/desktop/index.module.scss'
 import { MainMenuProps } from '@shared/interfaces'
 
 const MainMenu = forwardRef<HTMLDivElement, MainMenuProps>(

@@ -1,3 +1,3 @@
 'use client'
 
-export { default as DesktopMenuLayout } from './desktop_menu'
+export { default as DesktopMenuLayout } from './menu'
