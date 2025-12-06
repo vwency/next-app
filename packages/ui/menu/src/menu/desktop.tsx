@@ -24,7 +24,7 @@ const MainMenu = forwardRef<HTMLDivElement, MainMenuProps>(
             <span className={styles.bar} />
           </button>
 
-          <ul className={`${styles.listInline} ${isOpen ? styles.active : ''}`}>
+          <ul className={styles.listInline}>
             <li className={styles.listInlineItem}>Премьеры</li>
             <li className={styles.listInlineItem}>
               <Link href="/afisha">Афиша</Link>
