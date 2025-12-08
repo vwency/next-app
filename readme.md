@@ -23,7 +23,7 @@ docker-compose up --build
 
 ![alt text](art/image.png)
 
-### afisha page
+### afisha page 
 
 ![alt text](art/image-1.png)
 

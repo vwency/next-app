@@ -24,22 +24,18 @@ const DesktopMenuLayout: React.FC<HeaderLayoutProps> = ({ contentRef }) => {
         toggleMenu()
       }
 
-      if (diff > 0) {
-        accumulatedUpScroll.current = 0
-      } else {
-        accumulatedUpScroll.current -= diff
-      }
-
       let newTranslateY = translateY
 
       if (diff > 0) {
-        newTranslateY += diff
-      } else if (accumulatedUpScroll.current >= SCROLL_SHOW_THRESHOLD) {
-        newTranslateY += diff
-      }
+        accumulatedUpScroll.current = 0
+        newTranslateY = Math.min(newTranslateY + diff, MAX_SCROLL_HIDE)
+      } else {
+        accumulatedUpScroll.current -= diff
 
-      if (newTranslateY > MAX_SCROLL_HIDE) newTranslateY = MAX_SCROLL_HIDE
-      if (newTranslateY < 0) newTranslateY = 0
+        if (accumulatedUpScroll.current >= SCROLL_SHOW_THRESHOLD) {
+          newTranslateY = 0
+        }
+      }
 
       setTranslateY(newTranslateY)
       lastScrollY.current = currentScrollY
