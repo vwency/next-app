@@ -1,2 +1,2 @@
-export const MAX_SCROLL_HIDE = 100
+export const MAX_SCROLL_HIDE = 1
 export const SCROLL_SHOW_THRESHOLD = 1
