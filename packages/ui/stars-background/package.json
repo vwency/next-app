@@ -17,8 +17,8 @@
     "react": "^19.2.0"
   },
   "dependencies": {
-    "@shared/types": "workspace:*",
-    "@shared/consts": "workspace:*"
+    "@shared/consts": "workspace:*",
+    "@shared/types": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",

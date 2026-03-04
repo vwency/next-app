@@ -1,0 +1,4 @@
+> nx run @shared/consts:build
+
+Compiling TypeScript files for project "@shared/consts"...
+Done compiling TypeScript files for project "@shared/consts".

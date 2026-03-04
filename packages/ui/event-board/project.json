@@ -1,0 +1,30 @@
+{
+  "name": "@ui/event-board",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ui/event-board/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "tsc && rsync -av --include '*/' --include '*.scss' --exclude '*' src/ dist/",
+        "cwd": "packages/ui/event-board"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit",
+        "cwd": "packages/ui/event-board"
+      }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf dist",
+        "cwd": "packages/ui/event-board"
+      }
+    }
+  }
+}

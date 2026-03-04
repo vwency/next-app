@@ -1,0 +1,34 @@
+Compiling TypeScript files for project "@ui/event-board"...
+[1m[31m[96mpackages/ui/event-board/src/CardContent.tsx[0m:[93m2[0m:[93m26[0m - [91merror[0m[90m TS2307: [0mCannot find module '@ui/advertisements' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CardGrid } from '@ui/advertisements'[39m[22m
+[1m[31m[7m [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[96mpackages/ui/event-board/src/CardContent.tsx[0m:[93m4[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module '@ui/modals' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m4[0m import { DetailedModal } from '@ui/modals'[39m[22m
+[1m[31m[7m [0m [91m                              ~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+
+[2m../../dist/styles/_body.scss[22m
+
+[2m../../dist/styles/_button_buy.scss[22m
+
+[2m../../dist/styles/_close-btn.scss[22m
+
+[2m../../dist/styles/_content.scss[22m
+
+[2m../../dist/styles/_details.scss[22m
+
+[2m../../dist/styles/_gallery.scss[22m
+
+[2m../../dist/styles/_list.scss[22m
+
+[2m../../dist/styles/_media.scss[22m
+
+[2m../../dist/styles/_meta.scss[22m
+
+[2m../../dist/styles/_overlay.scss[22m
+
+[2m../../dist/styles/_trailer.scss[22m
+
+[2m../../dist/styles/index.module.scss[22m

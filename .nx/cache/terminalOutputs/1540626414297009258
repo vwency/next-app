@@ -1,0 +1,6 @@
+> nx run @ui/text-main:build
+
+Compiling TypeScript files for project "@ui/text-main"...
+Done compiling TypeScript files for project "@ui/text-main".
+
+[2m../../dist/styles/index.module.scss[22m

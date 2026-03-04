@@ -17,13 +17,13 @@
     "react": "^19.2.0"
   },
   "dependencies": {
-    "embla-carousel-react": "^8.6.0",
-    "@shared/consts": "workspace:*"
+    "@shared/consts": "workspace:*",
+    "embla-carousel-react": "^8.6.0"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",
     "@types/react": "19.2.2",
-    "typescript": "^5.0.0",
-    "sass": "^1.93.0"
+    "sass": "^1.93.0",
+    "typescript": "^5.0.0"
   }
 }

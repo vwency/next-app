@@ -1,0 +1,6 @@
+> nx run @ui/buttons:build
+
+Compiling TypeScript files for project "@ui/buttons"...
+Done compiling TypeScript files for project "@ui/buttons".
+
+[2m../../dist/styles/index.module.scss[22m

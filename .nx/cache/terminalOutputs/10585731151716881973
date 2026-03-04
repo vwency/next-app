@@ -1,0 +1,11 @@
+> tsc && rsync -av --include '*/' --include '*.scss' --exclude '*' src/ dist/
+
+sending incremental file list
+./
+styles/
+styles/Global/
+styles/Global/background.scss
+styles/Global/index.module.scss
+
+sent 2,720 bytes  received 69 bytes  5,578.00 bytes/sec
+total size is 2,445  speedup is 0.88

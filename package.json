@@ -2,17 +2,27 @@
   "name": "workspace-root",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "yarn@4.9.1",
+  "workspaces": [
+    "app",
+    "packages/*/*"
+  ],
   "scripts": {
-    "dev": "pnpm --filter app dev",
-    "build": "pnpm -r --sort build",
-    "start": "pnpm --filter app start",
+    "dev": "nx run app:dev",
+    "build": "nx run-many --target=build --all",
+    "build:affected": "nx affected --target=build",
+    "start": "nx run app:start",
     "prepare": "husky install",
-    "install:all": "pnpm install",
-    "clean": "pnpm -r exec rm -rf dist build node_modules"
+    "install:all": "yarn install",
+    "clean": "nx run-many --target=clean --all",
+    "graph": "nx graph",
+    "typecheck": "nx run-many --target=typecheck --all"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@nx/js": "^21.0.0",
+    "@nx/next": "^21.0.0",
+    "@nx/react": "^21.0.0",
     "depcheck": "^1.4.7",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
@@ -23,6 +33,7 @@
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
+    "nx": "^21.0.0",
     "prettier": "^3.6.2",
     "stylelint": "^16.24.0",
     "stylelint-config-standard": "^39.0.0",

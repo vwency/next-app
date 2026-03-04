@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@ui/event-board": "workspace:*",
-    "@ui/stars-background": "workspace:*",
     "@ui/menu": "workspace:*",
+    "@ui/stars-background": "workspace:*",
     "react": "^19.1.1"
   },
   "peerDependencies": {

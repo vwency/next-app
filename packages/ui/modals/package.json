@@ -17,10 +17,10 @@
     "react": "^19.2.0"
   },
   "dependencies": {
-    "react-dom": "19.2.0",
-    "@ui/hooks": "workspace:*",
+    "@shared/interfaces": "workspace:*",
     "@ui/advertisements": "workspace:*",
-    "@shared/interfaces": "workspace:*"
+    "@ui/hooks": "workspace:*",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",

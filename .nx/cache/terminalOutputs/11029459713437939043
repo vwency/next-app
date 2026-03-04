@@ -1,0 +1,8 @@
+> nx run @ui/stars-background:build
+
+Compiling TypeScript files for project "@ui/stars-background"...
+Done compiling TypeScript files for project "@ui/stars-background".
+
+[2m../../../dist/styles/Global/background.scss[22m
+
+[2m../../../dist/styles/Global/index.module.scss[22m

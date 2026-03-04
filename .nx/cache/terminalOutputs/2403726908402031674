@@ -1,0 +1,18 @@
+> nx run @ui/advertisements:build
+
+Compiling TypeScript files for project "@ui/advertisements"...
+Done compiling TypeScript files for project "@ui/advertisements".
+
+[2m../../../dist/styles/card/CardGrid.module.scss[22m
+
+[2m../../../dist/styles/card/CardItem.module.scss[22m
+
+[2m../../../dist/styles/card/CardItemDescription.module.scss[22m
+
+[2m../../../dist/styles/card/CardItemDetailed.module.scss[22m
+
+[2m../../../dist/styles/card/CardItemImage.module.scss[22m
+
+[2m../../../dist/styles/card/index.module.scss[22m
+
+[2m../../../dist/styles/card/media.scss[22m

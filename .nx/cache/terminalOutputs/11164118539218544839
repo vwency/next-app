@@ -1,0 +1,17 @@
+> tsc && rsync -av --include '*/' --include '*.scss' --exclude '*' src/ dist/
+
+sending incremental file list
+./
+styles/
+styles/_body.scss
+styles/_button_buy.scss
+styles/_close-btn.scss
+styles/_content.scss
+styles/_details.scss
+styles/_gallery.scss
+styles/_list.scss
+styles/_media.scss
+styles/_meta.scss
+styles/_overlay.scss
+styles/_trailer.scss
+styles/index.module.scss

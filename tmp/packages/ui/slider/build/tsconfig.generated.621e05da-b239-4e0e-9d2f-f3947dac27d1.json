@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@shared/*": [
+        "packages/shared/*"
+      ],
+      "@ui/*": [
+        "packages/ui/*"
+      ],
+      "@shared/consts": [
+        "dist/packages/shared/consts",
+        "packages/shared/consts/dist",
+        "packages/shared/consts/build",
+        "packages/shared/consts/public"
+      ],
+      "@shared/interfaces": [
+        "dist/packages/shared/interfaces",
+        "packages/shared/interfaces/dist",
+        "packages/shared/interfaces/build",
+        "packages/shared/interfaces/public"
+      ],
+      "@shared/types": [
+        "dist/packages/shared/types",
+        "packages/shared/types/dist",
+        "packages/shared/types/build",
+        "packages/shared/types/public"
+      ],
+      "@ui/hooks": [
+        "dist/packages/ui/hooks",
+        "packages/ui/hooks/dist",
+        "packages/ui/hooks/build",
+        "packages/ui/hooks/public"
+      ]
+    }
+  },
+  "extends": "../../../../../packages/ui/slider/tsconfig.json"
+}

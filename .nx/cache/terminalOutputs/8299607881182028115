@@ -1,0 +1,18 @@
+Compiling TypeScript files for project "@ui/menu"...
+[1m[31m[96mpackages/ui/menu/src/layout/menu.tsx[0m:[93m9[0m:[93m29[0m - [91merror[0m[90m TS2307: [0mCannot find module '@ui/hooks' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m import { useMainMenu } from '@ui/hooks'[39m[22m
+[1m[31m[7m [0m [91m                            ~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+
+[2m../../../dist/styles/desktop/index.module.scss[22m
+
+[2m../../../dist/styles/desktop/logo.scss[22m
+
+[2m../../../dist/styles/desktop/options.scss[22m
+
+[2m../../../dist/styles/desktop/referral.scss[22m
+
+[2m../../../dist/styles/desktop/wrapper.scss[22m
+
+[2m../../../dist/styles/mobile/index.module.scss[22m

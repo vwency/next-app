@@ -1,0 +1,30 @@
+{
+  "name": "@pages/afisha",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pages/afisha/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "tsc && rsync -av --include '*/' --include '*.scss' --exclude '*' src/ dist/",
+        "cwd": "packages/pages/afisha"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit",
+        "cwd": "packages/pages/afisha"
+      }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf dist",
+        "cwd": "packages/pages/afisha"
+      }
+    }
+  }
+}

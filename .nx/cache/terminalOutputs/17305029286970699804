@@ -1,0 +1,4 @@
+> nx run @shared/types:build
+
+Compiling TypeScript files for project "@shared/types"...
+Done compiling TypeScript files for project "@shared/types".

@@ -1,0 +1,1306 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.6.10",
+  "pathMappings": {
+    "@/*": [
+      "./*"
+    ],
+    "@shared/*": [
+      "packages/shared/*"
+    ],
+    "@ui/*": [
+      "packages/ui/*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "tsconfig.base.json",
+        "hash": "15477059475753955412"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "10515052060928312201"
+      },
+      {
+        "file": "tmp/packages/ui/advertisements/build/tsconfig.generated.03ba0789-2fea-4fd2-bfca-ac6139f8c17f.json",
+        "hash": "7751780030114210699"
+      },
+      {
+        "file": "utils/linters/.prettierrc.yaml",
+        "hash": "4136771118958922499"
+      },
+      {
+        "file": ".zed/settings.json",
+        "hash": "11594613211349291625"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "4458998987709649811"
+      },
+      {
+        "file": ".yarnrc.yml",
+        "hash": "16567255133979699894"
+      },
+      {
+        "file": "nx.json",
+        "hash": "958304855207584531"
+      },
+      {
+        "file": "tmp/packages/ui/slider/build/tsconfig.generated.621e05da-b239-4e0e-9d2f-f3947dac27d1.json",
+        "hash": "9316000669465189714"
+      },
+      {
+        "file": "tmp/packages/ui/menu/build/tsconfig.generated.a29715c9-7364-45c7-9bf7-6e4597dbaad4.json",
+        "hash": "677786755548558712"
+      },
+      {
+        "file": "package.json",
+        "hash": "16268164034086852575"
+      },
+      {
+        "file": "art/image-4.png",
+        "hash": "13771966019034249510"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "3310680480882439469"
+      },
+      {
+        "file": "art/image-5.png",
+        "hash": "15463752902064933746"
+      },
+      {
+        "file": "art/image-1.png",
+        "hash": "12192229768985611745"
+      },
+      {
+        "file": ".zed/extensions.json",
+        "hash": "8589678099921913241"
+      },
+      {
+        "file": "docker-compose.yaml",
+        "hash": "6674383749685900616"
+      },
+      {
+        "file": "utils/linters/.stylelintrc.json",
+        "hash": "61540264097699697"
+      },
+      {
+        "file": ".env.local",
+        "hash": "8283603929143072496"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "15701765382914743775"
+      },
+      {
+        "file": "utils/linters/eslint.config.mjs",
+        "hash": "1096142308220949183"
+      },
+      {
+        "file": "Dockerfile",
+        "hash": "9051477741545500511"
+      },
+      {
+        "file": "art/image-3.png",
+        "hash": "14832758704373578866"
+      },
+      {
+        "file": ".github/workflows/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "art/image.png",
+        "hash": "1066697431720766278"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "17193101214301976319"
+      },
+      {
+        "file": "readme.md",
+        "hash": "15199336618075864513"
+      },
+      {
+        "file": "art/image-2.png",
+        "hash": "4367392592997642634"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "1875241026255333067"
+      }
+    ],
+    "projectFileMap": {
+      "@ui/buttons": [
+        {
+          "file": "packages/ui/buttons/package.json",
+          "hash": "17076259888050659472",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/styled-components",
+            "npm:typescript",
+            "@ui/hooks",
+            "@ui/modals"
+          ]
+        },
+        {
+          "file": "packages/ui/buttons/project.json",
+          "hash": "947662339081977889"
+        },
+        {
+          "file": "packages/ui/buttons/src/Left/Button.tsx",
+          "hash": "10981975370599948831",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/buttons/src/Left/wrapper.tsx",
+          "hash": "12111407891655979057",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/buttons/src/Right/Button.tsx",
+          "hash": "1541979415211629233",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/buttons/src/Right/wrapper.tsx",
+          "hash": "2683093998922740031",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/buttons/src/index.ts",
+          "hash": "17696495415035903520"
+        },
+        {
+          "file": "packages/ui/buttons/src/styles/index.module.scss",
+          "hash": "18303154348871393543"
+        },
+        {
+          "file": "packages/ui/buttons/src/styles/index.module.scss.d.ts",
+          "hash": "6015898669343496138"
+        },
+        {
+          "file": "packages/ui/buttons/src/wrapper.tsx",
+          "hash": "2684748001577152560",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/buttons/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@ui/text-main": [
+        {
+          "file": "packages/ui/text-main/package.json",
+          "hash": "8360093417382848069",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/styled-components",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/ui/text-main/project.json",
+          "hash": "5162879526604388564"
+        },
+        {
+          "file": "packages/ui/text-main/src/index.ts",
+          "hash": "10155908096733826410"
+        },
+        {
+          "file": "packages/ui/text-main/src/styles/index.module.scss",
+          "hash": "4030025872349391041"
+        },
+        {
+          "file": "packages/ui/text-main/src/styles/index.module.scss.d.ts",
+          "hash": "6268313943638634561"
+        },
+        {
+          "file": "packages/ui/text-main/src/text.tsx",
+          "hash": "6904045755710025206",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/text-main/src/wrapper.tsx",
+          "hash": "13061417448300443665",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/text-main/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@ui/event-board": [
+        {
+          "file": "packages/ui/event-board/package.json",
+          "hash": "17083498931687009676",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/styled-components",
+            "npm:typescript",
+            "@shared/interfaces",
+            "@ui/advertisements",
+            "@ui/modals"
+          ]
+        },
+        {
+          "file": "packages/ui/event-board/project.json",
+          "hash": "17640302672436808674"
+        },
+        {
+          "file": "packages/ui/event-board/src/CardContent.tsx",
+          "hash": "13206291162754023165",
+          "deps": [
+            "npm:react",
+            "@ui/advertisements",
+            "@ui/modals",
+            "@shared/interfaces"
+          ]
+        },
+        {
+          "file": "packages/ui/event-board/src/Items.tsx",
+          "hash": "12875649628618752124",
+          "deps": [
+            "@shared/interfaces"
+          ]
+        },
+        {
+          "file": "packages/ui/event-board/src/index.ts",
+          "hash": "5424128460041853739"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_body.scss",
+          "hash": "7430056875885572071"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_button_buy.scss",
+          "hash": "8619257293444641176"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_close-btn.scss",
+          "hash": "14250689089335705306"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_content.scss",
+          "hash": "6363384604630055547"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_details.scss",
+          "hash": "9143917285570557678"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_gallery.scss",
+          "hash": "3162147877244840297"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_list.scss",
+          "hash": "1583594416126207901"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_media.scss",
+          "hash": "11998331075300290019"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_meta.scss",
+          "hash": "16037323314648878588"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_overlay.scss",
+          "hash": "5360847349859883146"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/_trailer.scss",
+          "hash": "6588833129977752545"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/index.module.scss",
+          "hash": "6010602352360928141"
+        },
+        {
+          "file": "packages/ui/event-board/src/styles/index.module.scss.d.ts",
+          "hash": "5560337153064574274"
+        },
+        {
+          "file": "packages/ui/event-board/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@shared/interfaces": [
+        {
+          "file": "packages/shared/interfaces/package.json",
+          "hash": "10480419414939372581",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/shared/interfaces/project.json",
+          "hash": "5461629233140051037"
+        },
+        {
+          "file": "packages/shared/interfaces/src/CardGridProps.ts",
+          "hash": "14018550852960177871"
+        },
+        {
+          "file": "packages/shared/interfaces/src/CardItemProps.ts",
+          "hash": "3713690838181375602"
+        },
+        {
+          "file": "packages/shared/interfaces/src/GalleryItem.ts",
+          "hash": "15034922360260347666"
+        },
+        {
+          "file": "packages/shared/interfaces/src/HeaderLayoutProps.ts",
+          "hash": "15958815397478821268"
+        },
+        {
+          "file": "packages/shared/interfaces/src/MainMenuProps.ts",
+          "hash": "11657747128598286927"
+        },
+        {
+          "file": "packages/shared/interfaces/src/ModalProps.ts",
+          "hash": "17252315408572891235"
+        },
+        {
+          "file": "packages/shared/interfaces/src/index.ts",
+          "hash": "18344815232142686878"
+        },
+        {
+          "file": "packages/shared/interfaces/tsconfig.json",
+          "hash": "18138359503679588515"
+        }
+      ],
+      "@ui/footer": [
+        {
+          "file": "packages/ui/footer/package.json",
+          "hash": "2686002480594693804",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/styled-components",
+            "npm:sass",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/ui/footer/project.json",
+          "hash": "4093105988409579690"
+        },
+        {
+          "file": "packages/ui/footer/src/Footer.tsx",
+          "hash": "11584927507748470026",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/footer/src/index.ts",
+          "hash": "8110920514712930955"
+        },
+        {
+          "file": "packages/ui/footer/src/styles/index.module.scss",
+          "hash": "5605114397505125332"
+        },
+        {
+          "file": "packages/ui/footer/src/styles/index.module.scss.d.ts",
+          "hash": "15001174768040899728"
+        },
+        {
+          "file": "packages/ui/footer/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@ui/slider": [
+        {
+          "file": "packages/ui/slider/package.json",
+          "hash": "14198563146797463108",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/styled-components",
+            "npm:sass",
+            "npm:typescript",
+            "@shared/consts",
+            "@shared/interfaces",
+            "@shared/types",
+            "@ui/hooks",
+            "npm:lucide-react",
+            "npm:next@16.0.0",
+            "npm:react-dom@19.2.4"
+          ]
+        },
+        {
+          "file": "packages/ui/slider/project.json",
+          "hash": "17721445836073683908"
+        },
+        {
+          "file": "packages/ui/slider/src/Items.tsx",
+          "hash": "710141540846152272",
+          "deps": [
+            "@shared/interfaces"
+          ]
+        },
+        {
+          "file": "packages/ui/slider/src/SlideImage.tsx",
+          "hash": "17136295056449592176",
+          "deps": [
+            "npm:react",
+            "npm:next@16.0.0",
+            "@shared/types"
+          ]
+        },
+        {
+          "file": "packages/ui/slider/src/Slider.tsx",
+          "hash": "6798130120713135408",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react",
+            "@ui/hooks"
+          ]
+        },
+        {
+          "file": "packages/ui/slider/src/index.ts",
+          "hash": "4935277209938252805"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/_base.scss",
+          "hash": "170704314819670377"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/_navigation.scss",
+          "hash": "14815737992320746306"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/_responsive.scss",
+          "hash": "8493981057940680299"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/_variants.scss",
+          "hash": "4958450599998564643"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/_wrapper.scss",
+          "hash": "17532297153405284898"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/index.module.scss",
+          "hash": "7082523164298515383"
+        },
+        {
+          "file": "packages/ui/slider/src/styles/index.module.scss.d.ts",
+          "hash": "5124785316436716713"
+        },
+        {
+          "file": "packages/ui/slider/src/wrapper.tsx",
+          "hash": "16739085562591907842",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/slider/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@ui/text-footer": [
+        {
+          "file": "packages/ui/text-footer/package.json",
+          "hash": "14185273144646155868",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/styled-components",
+            "npm:sass",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/ui/text-footer/project.json",
+          "hash": "4969706894691199745"
+        },
+        {
+          "file": "packages/ui/text-footer/src/index.ts",
+          "hash": "5455608201121544885"
+        },
+        {
+          "file": "packages/ui/text-footer/src/styles/index.module.scss",
+          "hash": "15664931697338123007"
+        },
+        {
+          "file": "packages/ui/text-footer/src/styles/index.module.scss.d.ts",
+          "hash": "6404297994449855637"
+        },
+        {
+          "file": "packages/ui/text-footer/src/text.tsx",
+          "hash": "3313059571799363978",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/text-footer/src/wrapper.tsx",
+          "hash": "6368048153469110087",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/text-footer/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "app": [
+        {
+          "file": "app/next.config.ts",
+          "hash": "18219389434987587724",
+          "deps": [
+            "npm:next@16.0.0"
+          ]
+        },
+        {
+          "file": "app/package.json",
+          "hash": "5457372887676477564",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@types/node",
+            "npm:@types/react@19.2.14",
+            "npm:@types/react-dom",
+            "npm:next@16.0.0",
+            "npm:sass",
+            "npm:typescript",
+            "@pages/afisha",
+            "@pages/landing",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "app/project.json",
+          "hash": "11324822243932879281"
+        },
+        {
+          "file": "app/public/assets/backgorund_m.png",
+          "hash": "12771831240280006243"
+        },
+        {
+          "file": "app/public/assets/mdi_discord.svg",
+          "hash": "18057314540717739893"
+        },
+        {
+          "file": "app/public/assets/mdi_github.svg",
+          "hash": "15136483844255096252"
+        },
+        {
+          "file": "app/public/assets/mdi_reddit.svg",
+          "hash": "16652080203451209547"
+        },
+        {
+          "file": "app/public/assets/mdi_twitter.svg",
+          "hash": "15426025833843701442"
+        },
+        {
+          "file": "app/src/app/afisha/page.tsx",
+          "hash": "3387984230595582217",
+          "deps": [
+            "@pages/afisha"
+          ]
+        },
+        {
+          "file": "app/src/app/layout.tsx",
+          "hash": "1607759158083814388"
+        },
+        {
+          "file": "app/src/app/page.tsx",
+          "hash": "9694613453425701228",
+          "deps": [
+            "@pages/landing"
+          ]
+        },
+        {
+          "file": "app/src/styles/reset/background.scss",
+          "hash": "8787832080299500891"
+        },
+        {
+          "file": "app/src/styles/reset/index.scss",
+          "hash": "16531030144990800775"
+        },
+        {
+          "file": "app/tests/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "app/tsconfig.json",
+          "hash": "7870656811343672696"
+        }
+      ],
+      "@shared/consts": [
+        {
+          "file": "packages/shared/consts/package.json",
+          "hash": "4591635980078660391",
+          "deps": [
+            "npm:@types/node",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/shared/consts/project.json",
+          "hash": "13076538088940735352"
+        },
+        {
+          "file": "packages/shared/consts/src/HeaderLayout.ts",
+          "hash": "4126253720246709358"
+        },
+        {
+          "file": "packages/shared/consts/src/Slider.ts",
+          "hash": "16946473022003097814"
+        },
+        {
+          "file": "packages/shared/consts/src/SliderImages.ts",
+          "hash": "16165372263914087385"
+        },
+        {
+          "file": "packages/shared/consts/src/Start.ts",
+          "hash": "11258839871569922279"
+        },
+        {
+          "file": "packages/shared/consts/src/index.ts",
+          "hash": "2755245379560893407"
+        },
+        {
+          "file": "packages/shared/consts/tsconfig.json",
+          "hash": "18138359503679588515"
+        }
+      ],
+      "@ui/modals": [
+        {
+          "file": "packages/ui/modals/package.json",
+          "hash": "6808556115651875981",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom@19.2.0",
+            "npm:@types/styled-components",
+            "npm:typescript",
+            "@shared/interfaces",
+            "@ui/advertisements",
+            "@ui/hooks",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/ui/modals/project.json",
+          "hash": "9080382248255846484"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/DetailedModal.tsx",
+          "hash": "7102040657373108647",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "@shared/interfaces",
+            "@ui/hooks"
+          ]
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/_animations.scss",
+          "hash": "17672246675534048994"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/_body.scss",
+          "hash": "4871199298035237254"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/_close.scss",
+          "hash": "9409395664644077796"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/_content.scss",
+          "hash": "12005580223464589771"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/_media.scss",
+          "hash": "18298093410703565674"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/_overlay.scss",
+          "hash": "9958663022044363087"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/index.module.scss",
+          "hash": "15616343727740362104"
+        },
+        {
+          "file": "packages/ui/modals/src/DetailedCard/index.module.scss.d.ts",
+          "hash": "10501944052873514096"
+        },
+        {
+          "file": "packages/ui/modals/src/index.ts",
+          "hash": "5174604458574516283"
+        },
+        {
+          "file": "packages/ui/modals/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@pages/landing": [
+        {
+          "file": "packages/pages/landing/package.json",
+          "hash": "11636057481666847066",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react@19.2.7",
+            "npm:@types/styled-components",
+            "npm:typescript",
+            "@ui/buttons",
+            "@ui/footer",
+            "@ui/menu",
+            "@ui/slider",
+            "@ui/stars-background",
+            "@ui/text-footer",
+            "@ui/text-header",
+            "@ui/text-main",
+            "npm:next@16.0.5",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/pages/landing/project.json",
+          "hash": "10028221515761536958"
+        },
+        {
+          "file": "packages/pages/landing/src/index.ts",
+          "hash": "11139327055208236624"
+        },
+        {
+          "file": "packages/pages/landing/src/page.tsx",
+          "hash": "9583311866651521908",
+          "deps": [
+            "npm:react",
+            "npm:next@16.0.5",
+            "@ui/text-header",
+            "@ui/text-main",
+            "@ui/slider",
+            "@ui/text-footer",
+            "@ui/buttons",
+            "@ui/footer"
+          ]
+        },
+        {
+          "file": "packages/pages/landing/src/styles/index.module.scss",
+          "hash": "12514917993096248357"
+        },
+        {
+          "file": "packages/pages/landing/src/styles/index.module.scss.d.ts",
+          "hash": "17179940770570296140"
+        },
+        {
+          "file": "packages/pages/landing/src/wrapper.tsx",
+          "hash": "3285166988316231127",
+          "deps": [
+            "npm:react",
+            "@ui/menu",
+            "@ui/stars-background"
+          ]
+        },
+        {
+          "file": "packages/pages/landing/tsconfig.json",
+          "hash": "6990493165992645927"
+        }
+      ],
+      "@shared/types": [
+        {
+          "file": "packages/shared/types/package.json",
+          "hash": "11647068459586319556",
+          "deps": [
+            "npm:@types/node",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/shared/types/project.json",
+          "hash": "654687510271129599"
+        },
+        {
+          "file": "packages/shared/types/src/SlideImageProps.ts",
+          "hash": "14518847631388149550"
+        },
+        {
+          "file": "packages/shared/types/src/Star.ts",
+          "hash": "9260777139697550260"
+        },
+        {
+          "file": "packages/shared/types/src/index.ts",
+          "hash": "14497311354529523488"
+        },
+        {
+          "file": "packages/shared/types/tsconfig.json",
+          "hash": "18138359503679588515"
+        }
+      ],
+      "@ui/advertisements": [
+        {
+          "file": "packages/ui/advertisements/package.json",
+          "hash": "608613700072779034",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/styled-components",
+            "npm:typescript",
+            "@shared/consts",
+            "@shared/interfaces",
+            "@shared/types",
+            "@ui/hooks"
+          ]
+        },
+        {
+          "file": "packages/ui/advertisements/project.json",
+          "hash": "13843367643408858397"
+        },
+        {
+          "file": "packages/ui/advertisements/src/CardGrid.tsx",
+          "hash": "3930984866204913395",
+          "deps": [
+            "npm:react",
+            "@shared/interfaces"
+          ]
+        },
+        {
+          "file": "packages/ui/advertisements/src/CardItem.tsx",
+          "hash": "1911177927244780866",
+          "deps": [
+            "npm:react",
+            "@shared/interfaces"
+          ]
+        },
+        {
+          "file": "packages/ui/advertisements/src/index.ts",
+          "hash": "6376159941607803124"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/CardGrid.module.scss",
+          "hash": "781940904636739131"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/CardItem.module.scss",
+          "hash": "7727169368406188808"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/CardItemDescription.module.scss",
+          "hash": "8350816059138669998"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/CardItemDetailed.module.scss",
+          "hash": "14752027991969608834"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/CardItemImage.module.scss",
+          "hash": "2737376407963632571"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/index.module.scss",
+          "hash": "13562449618546844113"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/index.module.scss.d.ts",
+          "hash": "8204590205644096105"
+        },
+        {
+          "file": "packages/ui/advertisements/src/styles/card/media.scss",
+          "hash": "1783081977060501253"
+        },
+        {
+          "file": "packages/ui/advertisements/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@ui/hooks": [
+        {
+          "file": "packages/ui/hooks/package.json",
+          "hash": "13445711446423539219",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:sass",
+            "npm:typescript",
+            "@shared/consts",
+            "npm:embla-carousel-react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/project.json",
+          "hash": "16595460568452437502"
+        },
+        {
+          "file": "packages/ui/hooks/src/index.ts",
+          "hash": "1427485172993038942"
+        },
+        {
+          "file": "packages/ui/hooks/src/useAutoEmblaCarousel.ts",
+          "hash": "13078803946707767320",
+          "deps": [
+            "npm:react",
+            "npm:embla-carousel-react",
+            "@shared/consts"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/src/useCardItemHover.ts",
+          "hash": "14891869851006191384",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/src/useLockBodyScroll.ts",
+          "hash": "17833889480965320897",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/src/useMainMenu.ts",
+          "hash": "4496803653428153068",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/src/useModal.ts",
+          "hash": "62546574339778309",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/src/useModalClose.ts",
+          "hash": "8320018808084933928",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/src/useMountedAnimation.ts",
+          "hash": "18026360115876305984",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/hooks/tsconfig.json",
+          "hash": "12276556643026492938"
+        }
+      ],
+      "@ui/menu": [
+        {
+          "file": "packages/ui/menu/package.json",
+          "hash": "17667987969266641652",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom@19.2.0",
+            "npm:@types/styled-components",
+            "npm:sass",
+            "npm:typescript",
+            "@shared/consts",
+            "@shared/interfaces",
+            "@ui/hooks",
+            "npm:next@16.0.0",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/ui/menu/project.json",
+          "hash": "2152032462171438099"
+        },
+        {
+          "file": "packages/ui/menu/src/index.ts",
+          "hash": "6175005620825296202"
+        },
+        {
+          "file": "packages/ui/menu/src/layout/index.ts",
+          "hash": "7147353918997627037"
+        },
+        {
+          "file": "packages/ui/menu/src/layout/menu.tsx",
+          "hash": "7749163303432981338",
+          "deps": [
+            "npm:react",
+            "@shared/interfaces",
+            "@shared/consts",
+            "@ui/hooks"
+          ]
+        },
+        {
+          "file": "packages/ui/menu/src/menu/desktop.tsx",
+          "hash": "16059933437673024948",
+          "deps": [
+            "npm:react",
+            "npm:next@16.0.0",
+            "@shared/interfaces"
+          ]
+        },
+        {
+          "file": "packages/ui/menu/src/menu/index.ts",
+          "hash": "15357232477254218724"
+        },
+        {
+          "file": "packages/ui/menu/src/menu/mobile.tsx",
+          "hash": "1601419727530535789",
+          "deps": [
+            "npm:react",
+            "npm:next@16.0.0"
+          ]
+        },
+        {
+          "file": "packages/ui/menu/src/styles/desktop/index.module.scss",
+          "hash": "5217631537494991943"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/desktop/index.module.scss.d.ts",
+          "hash": "7871447746625293423"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/desktop/logo.scss",
+          "hash": "1446827160392602470"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/desktop/options.scss",
+          "hash": "16224062337225535872"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/desktop/referral.scss",
+          "hash": "15517540884828845952"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/desktop/wrapper.scss",
+          "hash": "3420925456849366360"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/mobile/index.module.scss",
+          "hash": "4449386931437268034"
+        },
+        {
+          "file": "packages/ui/menu/src/styles/mobile/index.module.scss.d.ts",
+          "hash": "5792851677314863572"
+        },
+        {
+          "file": "packages/ui/menu/tsconfig.json",
+          "hash": "4449485943655324248"
+        }
+      ],
+      "@ui/stars-background": [
+        {
+          "file": "packages/ui/stars-background/package.json",
+          "hash": "15782648049939173488",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/styled-components",
+            "npm:sass",
+            "npm:typescript",
+            "@shared/consts",
+            "@shared/types"
+          ]
+        },
+        {
+          "file": "packages/ui/stars-background/project.json",
+          "hash": "6349126163900437184"
+        },
+        {
+          "file": "packages/ui/stars-background/src/animate.tsx",
+          "hash": "3827441242713200196",
+          "deps": [
+            "@shared/consts",
+            "@shared/types",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/stars-background/src/index.ts",
+          "hash": "15195253313345871943"
+        },
+        {
+          "file": "packages/ui/stars-background/src/init.tsx",
+          "hash": "18074847305153396286",
+          "deps": [
+            "npm:react",
+            "@shared/types",
+            "@shared/consts"
+          ]
+        },
+        {
+          "file": "packages/ui/stars-background/src/main.tsx",
+          "hash": "14344660091803507596",
+          "deps": [
+            "npm:react",
+            "@shared/types"
+          ]
+        },
+        {
+          "file": "packages/ui/stars-background/src/render.tsx",
+          "hash": "3791713726191912918",
+          "deps": [
+            "@shared/types",
+            "@shared/consts"
+          ]
+        },
+        {
+          "file": "packages/ui/stars-background/src/styles/Global/background.scss",
+          "hash": "1792837373057778248"
+        },
+        {
+          "file": "packages/ui/stars-background/src/styles/Global/index.module.scss",
+          "hash": "10341039357214786320"
+        },
+        {
+          "file": "packages/ui/stars-background/src/styles/Global/index.module.scss.d.ts",
+          "hash": "11598212053865717335"
+        },
+        {
+          "file": "packages/ui/stars-background/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@ui/text-header": [
+        {
+          "file": "packages/ui/text-header/package.json",
+          "hash": "5428476056346503996",
+          "deps": [
+            "npm:react",
+            "npm:@types/node@24.9.1",
+            "npm:@types/react@19.2.14",
+            "npm:@types/react-dom",
+            "npm:@types/styled-components",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/ui/text-header/project.json",
+          "hash": "14358521104714772516"
+        },
+        {
+          "file": "packages/ui/text-header/src/index.ts",
+          "hash": "10155908096733826410"
+        },
+        {
+          "file": "packages/ui/text-header/src/styles/index.module.scss",
+          "hash": "489445050979722730"
+        },
+        {
+          "file": "packages/ui/text-header/src/styles/index.module.scss.d.ts",
+          "hash": "13018953088354164893"
+        },
+        {
+          "file": "packages/ui/text-header/src/text.tsx",
+          "hash": "3314291636849932243",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/text-header/src/wrapper.tsx",
+          "hash": "3746204354149958517",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/text-header/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ],
+      "@pages/afisha": [
+        {
+          "file": "packages/pages/afisha/package.json",
+          "hash": "9168082320662631575",
+          "deps": [
+            "npm:react",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/styled-components",
+            "npm:typescript",
+            "@ui/event-board",
+            "@ui/menu",
+            "@ui/stars-background"
+          ]
+        },
+        {
+          "file": "packages/pages/afisha/project.json",
+          "hash": "11450362281823059656"
+        },
+        {
+          "file": "packages/pages/afisha/src/index.ts",
+          "hash": "11139327055208236624"
+        },
+        {
+          "file": "packages/pages/afisha/src/page.tsx",
+          "hash": "10577056310713454171",
+          "deps": [
+            "npm:react",
+            "@ui/event-board"
+          ]
+        },
+        {
+          "file": "packages/pages/afisha/src/styles/index.module.scss",
+          "hash": "345375097211190155"
+        },
+        {
+          "file": "packages/pages/afisha/src/styles/index.module.scss.d.ts",
+          "hash": "17179940770570296140"
+        },
+        {
+          "file": "packages/pages/afisha/src/wrapper.tsx",
+          "hash": "3528289874355113773",
+          "deps": [
+            "npm:react",
+            "@ui/menu",
+            "@ui/stars-background"
+          ]
+        },
+        {
+          "file": "packages/pages/afisha/tsconfig.json",
+          "hash": "13753869798652810661"
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "4824630729275489560"
+}

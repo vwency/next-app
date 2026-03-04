@@ -1,0 +1,4 @@
+> nx run @shared/interfaces:build
+
+Compiling TypeScript files for project "@shared/interfaces"...
+Done compiling TypeScript files for project "@shared/interfaces".

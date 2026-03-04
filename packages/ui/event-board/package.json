@@ -17,8 +17,8 @@
     "react": "^19.2.0"
   },
   "dependencies": {
-    "@ui/advertisements": "workspace:*",
     "@shared/interfaces": "workspace:*",
+    "@ui/advertisements": "workspace:*",
     "@ui/modals": "workspace:*"
   },
   "devDependencies": {
