@@ -1,6 +1,0 @@
-> nx run @ui/footer:build
-
-Compiling TypeScript files for project "@ui/footer"...
-Done compiling TypeScript files for project "@ui/footer".
-
-[2m../../dist/styles/index.module.scss[22m

@@ -1,16 +1,0 @@
-> nx run @ui/menu:build
-
-Compiling TypeScript files for project "@ui/menu"...
-Done compiling TypeScript files for project "@ui/menu".
-
-[2m../../../dist/styles/desktop/index.module.scss[22m
-
-[2m../../../dist/styles/desktop/logo.scss[22m
-
-[2m../../../dist/styles/desktop/options.scss[22m
-
-[2m../../../dist/styles/desktop/referral.scss[22m
-
-[2m../../../dist/styles/desktop/wrapper.scss[22m
-
-[2m../../../dist/styles/mobile/index.module.scss[22m

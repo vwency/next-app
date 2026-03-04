@@ -1,36 +1,36 @@
 {
-  "name": "app",
+  "name": "entrypoint",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app/src",
+  "sourceRoot": "entrypoint/src",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "next build",
-        "cwd": "app"
+        "command": "next build && cp -r .next/static .next/standalone/entrypoint/.next/static && cp -r public .next/standalone/entrypoint/public",
+        "cwd": "entrypoint"
       }
     },
     "dev": {
       "executor": "nx:run-commands",
       "options": {
         "command": "next dev",
-        "cwd": "app"
+        "cwd": "entrypoint"
       }
     },
     "start": {
       "executor": "nx:run-commands",
       "options": {
         "command": "next start",
-        "cwd": "app"
+        "cwd": "entrypoint"
       }
     },
     "clean": {
       "executor": "nx:run-commands",
       "options": {
         "command": "rm -rf .next dist",
-        "cwd": "app"
+        "cwd": "entrypoint"
       }
     }
   }

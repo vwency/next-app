@@ -1,4 +1,0 @@
-> nx run @ui/hooks:build
-
-Compiling TypeScript files for project "@ui/hooks"...
-Done compiling TypeScript files for project "@ui/hooks".

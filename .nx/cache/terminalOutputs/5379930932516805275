@@ -1,6 +1,0 @@
-Compiling TypeScript files for project "@ui/hooks"...
-[1m[31m[96mpackages/ui/hooks/src/useAutoEmblaCarousel.ts[0m:[93m12[0m:[93m8[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/consts' or its corresponding type declarations.[39m[22m
-[1m[31m[39m[22m
-[1m[31m[7m12[0m } from '@shared/consts'[39m[22m
-[1m[31m[7m  [0m [91m       ~~~~~~~~~~~~~~~~[0m[39m[22m
-[1m[31m[39m[22m

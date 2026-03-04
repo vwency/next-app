@@ -1,6 +1,0 @@
-> nx run @ui/text-header:build
-
-Compiling TypeScript files for project "@ui/text-header"...
-Done compiling TypeScript files for project "@ui/text-header".
-
-[2m../../dist/styles/index.module.scss[22m

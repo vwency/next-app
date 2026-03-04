@@ -5592,24 +5592,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app@workspace:app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:app"
-  dependencies:
-    "@eslint/js": "npm:^9.34.0"
-    "@pages/afisha": "workspace:*"
-    "@pages/landing": "workspace:*"
-    "@types/node": "npm:^24.3.0"
-    "@types/react": "npm:^19.1.12"
-    "@types/react-dom": "npm:^19.2.0"
-    next: "npm:16.0.0"
-    react: "npm:^19.1.1"
-    react-dom: "npm:19.2.0"
-    sass: "npm:^1.91.0"
-    typescript: "npm:^5.9.2"
-  languageName: unknown
-  linkType: soft
-
 "argparse@npm:^1.0.7":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
@@ -7560,6 +7542,24 @@ __metadata:
   checksum: 10c0/b4fb9937bb47ecb00aaaceb9db9cdd1cc0b0fb649c0e843d05cf5dbbd2e9d2df8f98721d8b1b286445689c72af7b54a7242fc2d63ef7c9739037a8c73363e7ca
   languageName: node
   linkType: hard
+
+"entrypoint@workspace:entrypoint":
+  version: 0.0.0-use.local
+  resolution: "entrypoint@workspace:entrypoint"
+  dependencies:
+    "@eslint/js": "npm:^9.34.0"
+    "@pages/afisha": "workspace:*"
+    "@pages/landing": "workspace:*"
+    "@types/node": "npm:^24.3.0"
+    "@types/react": "npm:^19.1.12"
+    "@types/react-dom": "npm:^19.2.0"
+    next: "npm:16.0.0"
+    react: "npm:^19.1.1"
+    react-dom: "npm:19.2.0"
+    sass: "npm:^1.91.0"
+    typescript: "npm:^5.9.2"
+  languageName: unknown
+  linkType: soft
 
 "env-paths@npm:^2.2.0, env-paths@npm:^2.2.1":
   version: 2.2.1

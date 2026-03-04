@@ -4,14 +4,14 @@
   "private": true,
   "packageManager": "yarn@4.9.1",
   "workspaces": [
-    "app",
+    "entrypoint",
     "packages/*/*"
   ],
   "scripts": {
-    "dev": "nx run app:dev",
+    "dev": "nx run entrypoint:dev",
     "build": "nx run-many --target=build --all",
     "build:affected": "nx affected --target=build",
-    "start": "nx run app:start",
+    "start": "nx run entrypoint:start",
     "prepare": "husky install",
     "install:all": "yarn install",
     "clean": "nx run-many --target=clean --all",
@@ -50,7 +50,7 @@
       "eslint --config utils/linters/eslint.config.mjs --fix",
       "prettier --config utils/linters/.prettierrc.yaml --write"
     ],
-    "app/**/*.{css,scss}": [
+    "entrypoint/**/*.{css,scss}": [
       "stylelint --config utils/linters/.stylelintrc.json --fix"
     ],
     "packages/**/*.{css,scss}": [

@@ -1,18 +1,0 @@
-> nx run @ui/modals:build
-
-Compiling TypeScript files for project "@ui/modals"...
-Done compiling TypeScript files for project "@ui/modals".
-
-[2m../../dist/DetailedCard/_animations.scss[22m
-
-[2m../../dist/DetailedCard/_body.scss[22m
-
-[2m../../dist/DetailedCard/_close.scss[22m
-
-[2m../../dist/DetailedCard/_content.scss[22m
-
-[2m../../dist/DetailedCard/_media.scss[22m
-
-[2m../../dist/DetailedCard/_overlay.scss[22m
-
-[2m../../dist/DetailedCard/index.module.scss[22m
