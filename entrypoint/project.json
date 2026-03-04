@@ -15,7 +15,7 @@
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "next dev",
+        "command": "next dev --turbopack",
         "cwd": "entrypoint"
       }
     },
@@ -33,5 +33,24 @@
         "cwd": "entrypoint"
       }
     }
-  }
+  },
+  "implicitDependencies": [
+    "@ui/footer",
+    "@ui/menu",
+    "@ui/slider",
+    "@ui/hooks",
+    "@ui/buttons",
+    "@ui/advertisements",
+    "@ui/event-board",
+    "@ui/modals",
+    "@ui/stars-background",
+    "@ui/text-footer",
+    "@ui/text-header",
+    "@ui/text-main",
+    "@pages/landing",
+    "@pages/afisha",
+    "@shared/consts",
+    "@shared/interfaces",
+    "@shared/types"
+  ]
 }
