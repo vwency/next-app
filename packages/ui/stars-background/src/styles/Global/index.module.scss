@@ -1,128 +1,24 @@
-@use "./background" as *;
-
-/* stylelint-disable selector-pseudo-class-no-unknown */
-:global(*),
-:global(*::before),
-:global(*::after) {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.stars-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+  background-color: black;
 }
 
-:global(html) {
+.stars-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-:global(html::-webkit-scrollbar),
-:global(body::-webkit-scrollbar) {
-  display: none;
-}
-
-:global(ul),
-:global(ol) {
-  list-style: none;
-}
-
-:global(a) {
-  text-decoration: none;
-  color: inherit;
-}
-
-:global(img) {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-:global(input),
-:global(button),
-:global(textarea),
-:global(select) {
-  font: inherit;
-}
-
-:global(table) {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
-:global(main),
-:global(header),
-:global(footer),
-:global(section),
-:global(article),
-:global(aside),
-:global(nav) {
-  display: block;
-}
-
-:global(button) {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-:global(:focus) {
-  outline: 2px solid rgb(255, 255, 255, 0.5);
-  outline-offset: 2px;
-}
-
-:global(*) {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  max-width: 100%;
-}
-
-:global(img),
-:global(video),
-:global(canvas),
-:global(svg) {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :global(*) {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  :global(html) {
-    scroll-behavior: auto;
-  }
-}
-
-:global(.no-select) {
+.no-select {
   user-select: none;
-}
-
-@media (width <= 1200px) {
-  :global(html) {
-    font-size: 15px;
-  }
-}
-
-@media (width <= 992px) {
-  :global(html) {
-    font-size: 14px;
-  }
-}
-
-@media (width <= 768px) {
-  :global(html) {
-    font-size: 13px;
-  }
-}
-
-@media (width <= 480px) {
-  :global(html) {
-    font-size: 12px;
-  }
 }

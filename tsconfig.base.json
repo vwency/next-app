@@ -2,15 +2,43 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@shared/*": [
-        "packages/shared/*"
-      ],
-      "@ui/*": [
-        "packages/ui/*"
-      ]
+      "@/*": ["./*"],
+      "@shared/*": ["packages/shared/*"],
+      "@ui/*": ["packages/ui/*"],
+      "@ui/footer": ["packages/ui/footer/src"],
+      "@ui/footer/*": ["packages/ui/footer/src/*"],
+      "@ui/menu": ["packages/ui/menu/src"],
+      "@ui/menu/*": ["packages/ui/menu/src/*"],
+      "@ui/slider": ["packages/ui/slider/src"],
+      "@ui/slider/*": ["packages/ui/slider/src/*"],
+      "@ui/hooks": ["packages/ui/hooks/src"],
+      "@ui/hooks/*": ["packages/ui/hooks/src/*"],
+      "@ui/buttons": ["packages/ui/buttons/src"],
+      "@ui/buttons/*": ["packages/ui/buttons/src/*"],
+      "@ui/advertisements": ["packages/ui/advertisements/src"],
+      "@ui/advertisements/*": ["packages/ui/advertisements/src/*"],
+      "@ui/event-board": ["packages/ui/event-board/src"],
+      "@ui/event-board/*": ["packages/ui/event-board/src/*"],
+      "@ui/modals": ["packages/ui/modals/src"],
+      "@ui/modals/*": ["packages/ui/modals/src/*"],
+      "@ui/stars-background": ["packages/ui/stars-background/src"],
+      "@ui/stars-background/*": ["packages/ui/stars-background/src/*"],
+      "@ui/text-footer": ["packages/ui/text-footer/src"],
+      "@ui/text-footer/*": ["packages/ui/text-footer/src/*"],
+      "@ui/text-header": ["packages/ui/text-header/src"],
+      "@ui/text-header/*": ["packages/ui/text-header/src/*"],
+      "@ui/text-main": ["packages/ui/text-main/src"],
+      "@ui/text-main/*": ["packages/ui/text-main/src/*"],
+      "@pages/landing": ["packages/pages/landing/src"],
+      "@pages/landing/*": ["packages/pages/landing/src/*"],
+      "@pages/afisha": ["packages/pages/afisha/src"],
+      "@pages/afisha/*": ["packages/pages/afisha/src/*"],
+      "@shared/consts": ["packages/shared/consts/src"],
+      "@shared/consts/*": ["packages/shared/consts/src/*"],
+      "@shared/interfaces": ["packages/shared/interfaces/src"],
+      "@shared/interfaces/*": ["packages/shared/interfaces/src/*"],
+      "@shared/types": ["packages/shared/types/src"],
+      "@shared/types/*": ["packages/shared/types/src/*"]
     }
   }
 }

@@ -8,14 +8,14 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "next build && cp -r .next/static .next/standalone/entrypoint/.next/static && cp -r public .next/standalone/entrypoint/public",
+        "command": "next build --webpack && cp -r .next/static .next/standalone/entrypoint/.next/static && cp -r public .next/standalone/entrypoint/public",
         "cwd": "entrypoint"
       }
     },
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "next dev --turbopack",
+        "command": "next dev --webpack",
         "cwd": "entrypoint"
       }
     },
